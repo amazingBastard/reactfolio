@@ -5,13 +5,13 @@ App.AuthErrors = React.createClass({
     render() {
         if (this.props.errors) {
             return (
-                <ul className="list-group">
+                <div className="errors alerts module">
                     {
                         _.values(this.props.errors).map((errorMessage) => {
-                            return <li key={errorMessage} className="list-group-item alert alert-danger">{errorMessage}</li>;
+                            return <p key={errorMessage} className="negative alert">{errorMessage}</p>;
                         })
                     }
-                </ul>
+                </div>
             )
         }
     }

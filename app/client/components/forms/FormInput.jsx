@@ -13,23 +13,23 @@ App.FormInput = React.createClass({
     },
     render() {
         const {type, label, name, value, onKeyUp, onBlur } = this.props;
-        let inputType;
+        let input;
 
-        var className = "form-group";
+        var className = 'input group';
         if (this.props.hasError) {
-            className += " has-error";
+            className += ' negative';
         }
 
         switch (type) {
-            case "textarea":
-                inputType = (
-                    <textarea type={ type } className="form-control" name={ name.toLowerCase() } placeholder={ name }
+            case 'textarea':
+                input = (
+                    <textarea type={ type } className="input" name={ name.toLowerCase() } placeholder={ name }
                               defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }></textarea>
                 );
                 break;
             default:
-                inputType = (
-                    <input type={ type } className="form-control" name={ name.toLowerCase() } placeholder={ name }
+                input = (
+                    <input type={ type } className="input" name={ name.toLowerCase() } placeholder={ name }
                            defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }/>
                 );
                 break;
@@ -38,9 +38,9 @@ App.FormInput = React.createClass({
 
         return (
             <div className={ className }>
-                { label === "none" ? "" :
-                    <label htmlFor={ name.toLowerCase() } className="control-label">{ name }</label> }
-                { inputType }
+                { label === 'none' ? '' :
+                    <label htmlFor={ name.toLowerCase() } className="label">{ name }</label> }
+                { input }
             </div>
         )
 

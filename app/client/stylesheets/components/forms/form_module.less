@@ -2,20 +2,45 @@
 
 // form module styles
 
-.form.module {
-  margin: @space-base auto;
+.module {
 
-  .title {
-    margin-bottom: @space-mini;
-    font-weight: 300;
-    text-transform: lowercase;
-    letter-spacing: @space-atomic;
-    color: @gray-light;
+  &.form {
+    margin: @space-base auto;
+
+    .title {
+      margin-bottom: @space-mini;
+      font-weight: 300;
+      text-transform: lowercase;
+      letter-spacing: @space-atomic;
+      color: @gray-light;
+    }
+
+    .form {
+      padding: @space-base;
+      border: @space-atomic solid @gray-light;
+      background: @neutral-color;
+    }
   }
 
-  .form {
-    padding: @space-base;
-    border: @space-atomic solid @gray-light;
-    background: @neutral-color;
+  &.alerts {
+    margin: -@space-base;
+    margin-bottom: @space-base;
+    padding: @space-mini @space-base;
+    background-color: @gray-light;
+    color: @primary-color;
+
+    .alert {
+      margin: 0;
+      font-size: @font-size-base;
+
+      &:first-child {
+        margin-top: @space-small;
+      }
+
+      &:last-child {
+        margin-bottom: @space-small;
+      }
+    }
   }
 }
+

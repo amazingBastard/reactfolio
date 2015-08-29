@@ -18,17 +18,17 @@ App.AdminLogin = React.createClass({
 
         var self = this;
 
-        var email = $(event.target).find("[name=email]").val();
-        var password = $(event.target).find("[name=password]").val();
+        var email = $(event.target).find('[name=email]').val();
+        var password = $(event.target).find('[name=password]').val();
 
         var errors = {};
 
         if (!email) {
-            errors.email = "Email required"
+            errors.email = 'Email required'
         }
 
         if (!password) {
-            errors.password = "Password required"
+            errors.password = 'Password required'
         }
 
         self.setState({
@@ -57,7 +57,7 @@ App.AdminLogin = React.createClass({
                 <h1 className="title"><i className="fa fa-terminal"></i>Admin Login</h1>
                 <form className="admin login form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors} />
-                    <App.FormInput hasError={!!this.state.errors.email} name="Email" type="text" />
+                    <App.FormInput hasError={!!this.state.errors.email} name="Email" type="email" />
                     <App.FormInput hasError={!!this.state.errors.password} name="Password" type="password" />
                     <input type="submit" className="primary submit login button"/>
                 </form>

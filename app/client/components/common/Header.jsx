@@ -9,25 +9,29 @@ App.Header = React.createClass({
         Meteor.logout();
     },
     render() {
-        let loginButton;
+        let buttons;
         let { currentUser } = this.data;
 
         if (currentUser) {
-            loginButton = (
-                <button className="login icon button" onClick={this.handleLogout}><i className="fa fa-sign-in"></i></button>
+            buttons = (
+                <div className="buttons">
+                    <a className="admin icon button" href="/admin"><i className="fa fa-user"></i></a>
+                    <button className="login icon button" onClick={this.handleLogout}><i className="fa fa-sign-out"></i>
+                    </button>
+                </div>
             )
         } else {
-            loginButton = (
-                <a className="login icon button" href="/admin"><i className="fa fa-sign-out"></i></a>
+            buttons = (
+                <div className="buttons">
+                    <a className="login icon button" href="/admin"><i className="fa fa-sign-in"></i></a>
+                </div>
             )
         }
 
         return (
             <header className="header">
-                <h1 className="title">Reactfolio</h1>
-                <div className="buttons">
-                    {loginButton}
-                </div>
+                <h1 className="title"><a className="route" href="/">Reactfolio</a></h1>
+                {buttons}
             </header>
         )
     }

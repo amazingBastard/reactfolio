@@ -5,7 +5,15 @@
 .admin.login.module {
   margin-top: @fluid-quarter;
 
-  .admin.login.form {
+  @media (min-width: @phone-width) {
+    width: @two-thirds;
+  }
 
+  @media (min-width: @tablet-width) {
+    width: @half;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @third;
   }
 }

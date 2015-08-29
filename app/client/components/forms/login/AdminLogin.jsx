@@ -57,9 +57,9 @@ App.AdminLogin = React.createClass({
                 <h1 className="title"><i className="fa fa-terminal"></i>Admin Login</h1>
                 <form className="admin login form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors} />
-                    <App.FormInput hasError={!!this.state.errors.email} name="Email" type="email" />
-                    <App.FormInput hasError={!!this.state.errors.password} name="Password" type="password" />
-                    <input type="submit" className="primary submit login button"/>
+                    <App.FormInput hasError={!!this.state.errors.email} label="none" icon="fa fa-envelope" name="Email" type="email" placeholder="email@email.com" />
+                    <App.FormInput hasError={!!this.state.errors.password} label="none" icon="fa fa-unlock" name="Password" type="password" placeholder="password" />
+                    <button type="submit" className="primary fluid submit login button"><i className="fa fa-hand-peace-o"></i></button>
                 </form>
             </div>
         )

@@ -6,8 +6,10 @@
 
 .button {
   cursor: pointer;
-  padding: @space-tiny @space-base;
+  margin: 0;
+  padding: @space-tiny;
   border: 0;
+  outline: 0;
   background-color: @gray-light;
   color: @font-color;
 
@@ -23,7 +25,7 @@
 
     &:hover,
     &:focus {
-      background-color: @secondary-color;
+      background-color: @gray-light;
       color: @light;
     }
   }
@@ -34,14 +36,14 @@
 
     &:hover,
     &:focus {
-      background-color: @primary-color;
+      background-color: @offset-color;
       color: @light;
     }
   }
 
   &.fluid {
     display: block;
-    width: auto;
+    width: @full;
     margin-right: auto;
     margin-left: auto;
   }

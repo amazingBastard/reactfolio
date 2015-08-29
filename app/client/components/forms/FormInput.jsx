@@ -2,8 +2,10 @@ App.FormInput = React.createClass({
     propTypes: {
         hasError: React.PropTypes.bool,
         label: React.PropTypes.string,
+        icon: React.PropTypes.string,
         type: React.PropTypes.string,
         name: React.PropTypes.string,
+        placeholder: React.PropTypes.string,
         value: React.PropTypes.string,
         onKeyUp: React.PropTypes.func,
         onBlur: React.PropTypes.func
@@ -12,7 +14,7 @@ App.FormInput = React.createClass({
         return true;
     },
     render() {
-        const {type, label, name, value, onKeyUp, onBlur } = this.props;
+        const {type, label, icon, name, placeholder, value, onKeyUp, onBlur } = this.props;
         let input;
 
         var className = 'input group';
@@ -23,13 +25,13 @@ App.FormInput = React.createClass({
         switch (type) {
             case 'textarea':
                 input = (
-                    <textarea type={ type } className="input" name={ name.toLowerCase() } placeholder={ name }
+                    <textarea type={ type } className="input" name={ name.toLowerCase() } placeholder={ placeholder }
                               defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }></textarea>
                 );
                 break;
             default:
                 input = (
-                    <input type={ type } className="input" name={ name.toLowerCase() } placeholder={ name }
+                    <input type={ type } className="input" name={ name.toLowerCase() } placeholder={ placeholder }
                            defaultValue={ value } onKeyUp={ onKeyUp } onBlur={ onBlur }/>
                 );
                 break;
@@ -38,7 +40,9 @@ App.FormInput = React.createClass({
 
         return (
             <div className={ className }>
-                { label === 'none' ? '' :
+                { label === 'none' ?
+                    <span className="icon"><i className={ icon }></i></span>
+                    :
                     <label htmlFor={ name.toLowerCase() } className="label">{ name }</label> }
                 { input }
             </div>

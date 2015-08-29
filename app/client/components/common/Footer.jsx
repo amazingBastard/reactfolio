@@ -3,7 +3,7 @@ C.Footer = React.createClass({
         return (
             <footer className="footer">
                 <p className="copyright">
-                      &copy;2015,
+                      <span className="date">&copy;2015, </span>
                       <a className="creator" href="http://damirvazgird.com" target="_blank">
                            Damir Vazgird
                       </a>

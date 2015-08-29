@@ -18,8 +18,8 @@ App.Admin = React.createClass({
                  <App.InsertProject / >
              )
          } else {
-             form = (
-                 <App.UserLogin />
+             formModule = (
+                 <App.AdminLogin />
              )
          }
 

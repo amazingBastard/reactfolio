@@ -1,4 +1,4 @@
-App.UserLogin = React.createClass({
+App.AdminLogin = React.createClass({
     mixins: [],
     PropTypes: {
 
@@ -54,7 +54,7 @@ App.UserLogin = React.createClass({
     render() {
         return (
             <div className="admin login module">
-                <h1 className="title">Login</h1>
+                <h1 className="title"><i className="fa fa-terminal"></i>Admin Login</h1>
                 <form className="admin login form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors} />
                     <App.FormInput hasError={!!this.state.errors.email} name="Email" type="text" />

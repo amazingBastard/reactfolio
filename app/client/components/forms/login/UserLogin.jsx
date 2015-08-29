@@ -47,7 +47,7 @@ C.UserLogin = React.createClass({
 
                 return;
             } else {
-                FlowRouter.go('Home');
+                FlowRouter.go('Root');
             }
         });
     },

@@ -2,11 +2,17 @@ C.Layout = React.createClass({
     render() {
         return (
             <div className="layout">
-                {this.props.header}
+                <header className="header">
+                     {this.props.header}
+                </header>
 
-                {this.props.content}
+                <main className="main">
+                     {this.props.content}
+                </main>
 
-                {this.props.footer}
+                <footer className="footer">
+                     {this.props.footer}
+                </footer>
             </div>
         )
     }

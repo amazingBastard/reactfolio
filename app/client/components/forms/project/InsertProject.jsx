@@ -65,14 +65,14 @@ App.InsertProject = React.createClass({
 
                 <form className="insert project form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors}/>
-                    <App.FormInput hasError={!!this.state.errors.title} label="none" icon="fa fa-envelope" name="Title"
+                    <App.FormInput hasError={!!this.state.errors.title} label="none" icon="fa fa-book" name="Title"
                                    type="text" placeholder="project title"/>
-                    <App.FormInput hasError={!!this.state.errors.image} label="none" icon="fa fa-unlock" name="Image"
+                    <App.FormInput hasError={!!this.state.errors.image} label="none" icon="fa fa-picture-o" name="Image"
                                    type="text" placeholder="image url"/>
-                    <App.FormInput hasError={!!this.state.errors.content} label="none" icon="fa fa-unlock"
+                    <App.FormInput hasError={!!this.state.errors.content} label="none" icon="fa fa-pencil"
                                    name="Content" type="textarea" placeholder="content"/>
                     <button type="submit" className="primary fluid submit project button"><i
-                        className="fa fa-hand-peace-o"></i></button>
+                        className="fa fa-download"></i></button>
                 </form>
             </div>
         )

@@ -38,25 +38,23 @@ App.InsertProject = React.createClass({
             return;
         }
 
-        if (err) {
-            self.setState({
-                errors: {'none': err.reason}
-            });
+        Meteor.call('insertProject', title, image, content, (err) => {
+            if (err) {
+                self.setState({
+                    errors: {'none': err.reason}
+                });
 
-            return
-        } else {
-            Projects.insert({
-                title: title,
-                image: image,
-                dontent: content,
-                createdAt: new Date()
-            });
+                return;
+            } else {
+                // Reset form
+                $(event.target).find('[name=title]').value = '';
+                $(event.target).find('[name=image]').value = '';
+                $(event.target).find('[name=content]').value = '';
 
-            // Clear form
-            React.findDOMNode(this.refs.title).value = '';
-            React.findDOMNode(this.refs.image).value = '';
-            React.findDOMNode(this.refs.content).value = '';
-        }
+                //FlowRouter.go('Root');
+            }
+        });
+
     },
     render() {
         return (

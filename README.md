@@ -81,6 +81,7 @@ Have a look at the repository for more information.
 * UI and UX
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
+  * [fortawesome:fontawesome](https://github.com/MeteorPackaging/Font-Awesome)
 * Development
   * [http](http://github.com/meteor/meteor/tree/devel/packages/http)
   * [underscore](http://github.com/meteor/meteor/tree/devel/packages/underscore)

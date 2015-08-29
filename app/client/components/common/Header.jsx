@@ -14,20 +14,20 @@ C.Header = React.createClass({
 
         if (currentUser) {
             loginButton = (
-              <li><a href="#" onClick={this.handleLogout}>Logout</a></li>
+                <button className="login icon button" onClick={this.handleLogout}><i className="fa fa-sign-in"></i></button>
             )
         } else {
             loginButton = (
-              <li><a href="/login">Login</a></li>
+                <a className="login icon button" href="/login"><i className="fa fa-sign-out"></i></a>
             )
         }
 
         return (
             <header className="header">
-               <h1 className="title">Reactfolio</h1>
-               <ul className="nav navbar-nav navbar-right">
+                <h1 className="title">Reactfolio</h1>
+                <div className="buttons">
                     {loginButton}
-                </ul>
+                </div>
             </header>
         )
     }

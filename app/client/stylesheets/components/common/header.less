@@ -3,33 +3,29 @@
 // header styles
 
 .header {
-	padding: @space-base;
-	background: @background-color;
+  position: relative;
+  padding: @space-base;
+  background: @background-color;
+  z-index: 1;
 
-	.title {
-		margin: 0;
-		text-align: center;
+  .title {
+    margin: 0;
+    text-align: center;
 
-		@media (min-width: @tablet-width) {
-			text-align: left;
-		}
+    @media (min-width: @tablet-width) {
+      text-align: left;
+    }
 
-		&.sub {
-			display: block;
+  }
 
-			@media (min-width: @tablet-width) {
-				display: inline-block;
-			}
-		}
+  .buttons {
+    float: right;
+    z-index: 1;
 
-		.logo {
-			display: block;
-			margin: auto;
-
-			@media (min-width: @tablet-width) {
-				display: inline-block;
-				margin-right: @space-base;
-			}
-		}
-	}
+    .icon.button {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
 }

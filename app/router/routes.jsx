@@ -1,7 +1,7 @@
 FlowRouter.route('/', {
     name: 'Root',
     subscriptions(params) {
-
+        Meteor.subscribe('projects');
     },
     action(params) {
         renderMainLayoutWith(<C.Root />);

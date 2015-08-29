@@ -4,18 +4,16 @@
 
 .header {
   position: relative;
-  padding: @space-base;
+  padding: @space-tiny;
   background: @background-color;
   z-index: 1;
 
   .title {
     margin: 0;
+    font-weight: normal;
     text-align: center;
-
-    @media (min-width: @tablet-width) {
-      text-align: left;
-    }
-
+    text-transform: uppercase;
+    letter-spacing: @space-mini;
   }
 
   .buttons {

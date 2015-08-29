@@ -47,11 +47,7 @@ App.InsertProject = React.createClass({
                 return;
             } else {
                 // Reset form
-                $(event.target).find('[name=title]').value = '';
-                $(event.target).find('[name=image]').value = '';
-                $(event.target).find('[name=content]').value = '';
-
-                //FlowRouter.go('Root');
+                document.querySelector('form').reset();
             }
         });
 

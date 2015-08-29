@@ -53,7 +53,7 @@ App.AdminLogin = React.createClass({
     },
     render() {
         return (
-            <div className="admin login module">
+            <div className="admin login form module">
                 <h1 className="title"><i className="fa fa-terminal"></i>Admin Login</h1>
                 <form className="admin login form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors} />

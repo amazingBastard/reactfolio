@@ -14,7 +14,6 @@ Minimal portfolio web-app built with React and Meteor. Based on [React Meteor Te
 * [Structure](#structure)
   * [Packages used](#packages-used)
   * [Folder structure](#folder-structure)
-  * [Components](#components)
 * [License](#license)
 
 ## Roadmap
@@ -102,15 +101,15 @@ app/                # Application folder
     lib/                # Library files that get executed first
     startup/            # Javascript files on Meteor.startup()
     stylesheets         # LESS files
-    templates/          # Contains all templates
+    components/          # Contains react components
+      common/             # Common components (i.e. header, footer)
+      forms/              # All forms
       layouts/            # Router layouts
       views/              # All the views
-      modules/            # UI elements and components (i.e. forms, actions, etc...)
-        common/             # Common components (i.e. header, footer)
-        elements/           # Re-usable components
-  orion/              # Orion CMS files
-    collections/        # Collection files, for each orion.Collection
-    dictionary/         # Orion dictionary
+  collections/        # All Collections
+    client/             # Client Collections
+    server/             # Server Collections
+  lib/                # Lib files that get executed first
   packages/           # Packages folder (custom meteor packages, npm)
   private/            # Private files
   public/             # Public files
@@ -118,6 +117,7 @@ app/                # Application folder
   server/             # Server folder
     fixtures/           # Meteor.Collection fixtures defined
     lib/                # Server side library folder
+    methods/            # Server methods
     publications/       # Collection publications
     startup/            # On server startup
   tests/              # All tests
@@ -133,20 +133,6 @@ environments/       # Environments folder
   production/         # production environment
 
 ```
-
-### Components
-
-MainLayout
-
-MainHeader
-
-MainFooter
-
-UserLogin
-
-FormInput
-
-AuthErrors
 
 ## License
 

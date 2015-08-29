@@ -85,7 +85,7 @@ Have a look at the repository for more information.
   * [http](http://github.com/meteor/meteor/tree/devel/packages/http)
   * [underscore](http://github.com/meteor/meteor/tree/devel/packages/underscore)
   * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
-  * [grove:less](https://github.com/grovelabs/meteor-less)
+  * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
   * [momentjs:moment](http://github.com/moment/moment/)
   * [msavin:mongol](http://github.com/msavin/Mongol)
 

@@ -66,9 +66,9 @@ Have a look at the repository for more information.
 * Accounts
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
 * Collections
-  * [aldeed:collection2]()
-  * [dburles:collection-helpers]()
-  * [matb33:collection-hooks]()
+  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
+  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
+  * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
 * Routing
   * [kadira:flow-router](https://github.com/kadirahq/flow-router)
@@ -83,9 +83,9 @@ Have a look at the repository for more information.
   * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
   * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
 * Development
-  * [http]()
-  * [underscore]()
-  * [react]()
+  * [http](http://github.com/meteor/meteor/tree/devel/packages/http)
+  * [underscore](http://github.com/meteor/meteor/tree/devel/packages/underscore)
+  * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
   * [grove:less](https://github.com/grovelabs/meteor-less)
   * [momentjs:moment](http://github.com/moment/moment/)
   * [msavin:mongol](http://github.com/msavin/Mongol)

@@ -6,7 +6,7 @@ html {
 
   body {
     color: @font-color;
-		font-family: @font-family-base;
+    font-family: @font-family-base;
     font-size: @font-size-base;
     line-height: @line-height-base;
 
@@ -47,21 +47,22 @@ html {
     }
 
     a {
+      color: @link-color;
       font-size: inherit;
       text-decoration: none;
 
       &:hover,
       &:focus {
-        color: @secondary-color;
+        color: @link-color;
         text-decoration: underline;
       }
 
       &:visited {
-        color: darken(@secondary-color, @quarter);
+        color: @offset-color;
       }
 
       &:active {
-        color: @highlight-color;
+        color: @offset-color;
         text-decoration: underline;
       }
     }
@@ -280,5 +281,5 @@ html {
         font-size: @font-size-large;
       }
     }
-	}
+  }
 }

@@ -6,9 +6,7 @@
 
 meteor-platform
 react
-meteorhacks:flow-router
 kadira:react-layout
-meteorhacks:flow-layout
 aldeed:collection2
 matb33:collection-hooks
 dburles:collection-helpers
@@ -22,3 +20,4 @@ accounts-password
 
 # sanjo:jasmine
 # velocity:html-reporter
+kadira:flow-router

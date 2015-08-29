@@ -9,11 +9,27 @@
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: @fluid-quarter;
-    padding: @space-base;s
+    height: @fluid-third;
+    margin: 0;
+    padding: @space-base;
+
+    @media (min-width: @desktop-width) {
+      padding-left: @eighth;
+      padding-right: @eighth;
+    }
+
+    @media (min-width: @jumbo-desktop-width) {
+      padding-left: @eighth + @sixteenth;
+      padding-right: @eighth + @sixteenth;
+    }
+
+    @media (min-width: @massive-desktop-width) {
+      padding-left: @quarter;
+      padding-right: @quarter;
+    }
 
     .title {
-      margin-bottom: 0;
+      margin: @space-small 0 @space-mini;
     }
 
     .image {
@@ -23,19 +39,35 @@
       width: @full;
       margin: 0 auto;
       text-transform: none;
-      font-size: 90%;
       opacity: 0;
       z-index: -1;
-      transition: opacity 0.35s, transform 0.35s;
-      transform: translate3d(0,50px,0);
-    }
+      transition: all @fast;
+      transform: translate3d(0, @eighth, 0);
 
-    .content {
-      margin-top: @space-base;
+      @media (min-width: @desktop-width) {
+        width: @three-quarters;
+      }
+
+      @media (min-width: @large-desktop-width) {
+        width: @half;
+      }
+
+      @media (min-width: @jumbo-desktop-width) {
+        width: @third;
+      }
+
+      @media (min-width: @massive-desktop-width) {
+        width: @half;
+      }
     }
 
     &:hover,
     &:focus {
+      box-shadow: inset 0 -@space-atomic @space-mini 0 @neutral-color;
+
+      .title {
+        color: @link-color;
+      }
 
       .image {
         opacity: 1;

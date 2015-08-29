@@ -7,9 +7,9 @@ App.Project = React.createClass({
     render() {
          return (
               <article className="project">
-                   <h2 className="title">{this.props.project.title}</h2>
-                   <img className="image" src="http://placehold.it/400x200" />
+                   <h1 className="title">{this.props.project.title}</h1>
                    <div className="content">
+                       <img className="image" src={this.props.project.image} />
                        {this.props.project.content}
                    </div>
               </article>

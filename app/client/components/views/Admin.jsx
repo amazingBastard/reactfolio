@@ -10,11 +10,11 @@ App.Admin = React.createClass({
          }
     },
     render() {
-         let form;
+         let formModule;
          let { currentUser } = this.data;
 
          if (currentUser) {
-             form = (
+             formModule = (
                  <App.InsertProject / >
              )
          } else {
@@ -25,7 +25,7 @@ App.Admin = React.createClass({
 
          return (
               <main className="admin view">
-                    {form}
+                    {formModule}
               </main>
          )
     }

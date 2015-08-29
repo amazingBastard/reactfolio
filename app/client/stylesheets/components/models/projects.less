@@ -30,6 +30,10 @@
 
     .title {
       margin: @space-small 0 @space-mini;
+      font-weight: 300;
+      text-transform: lowercase;
+      letter-spacing: @space-atomic;
+      transition: all @fast;
     }
 
     .image {
@@ -61,17 +65,27 @@
       }
     }
 
+    .content {
+      color: @neutral-color;
+      transition: all @fast;
+    }
+
     &:hover,
     &:focus {
       box-shadow: inset 0 -@space-atomic @space-mini 0 @neutral-color;
 
       .title {
         color: @link-color;
+        letter-spacing: @space-mini;
       }
 
       .image {
         opacity: 1;
         transform: translate3d(0,0,0);
+      }
+
+      .content {
+        color: @gray-light;
       }
     }
   }

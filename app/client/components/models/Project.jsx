@@ -8,7 +8,8 @@ C.Project = React.createClass({
          return (
               <article className="project">
                    <h2 className="title">{this.props.project.title}</h2>
-                   <div class="content">
+                   <img className="fluid image" src="http://placehold.it/400x200" />
+                   <div className="content">
                        {this.props.project.content}
                    </div>
               </article>

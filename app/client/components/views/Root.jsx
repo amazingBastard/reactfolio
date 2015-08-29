@@ -1,9 +1,9 @@
 C.Root = React.createClass({
     getProjects() {
         return [
-            { _id: 1, title: 'Project 1', content: 'This is the content.' },
-            { _id: 2, title: 'Project 2', content: 'This is the content.' },
-            { _id: 3, title: 'Project 3', content: 'This is the content.' }
+            { _id: 1, title: 'Project 1', thumb: 'http://placehold.it/400x200', content: 'This is the content.' },
+            { _id: 2, title: 'Project 2', thumb: 'http://placehold.it/400x200', content: 'This is the content.' },
+            { _id: 3, title: 'Project 3', thumb: 'http://placehold.it/400x200', content: 'This is the content.' }
         ];
     },
 
@@ -16,7 +16,7 @@ C.Root = React.createClass({
     render() {
         return (
             <main className="root view">
-                <div class="projects">
+                <div className="projects">
                     {this.renderProjects()}
                 </div>
             </main>

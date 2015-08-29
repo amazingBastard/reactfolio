@@ -11,10 +11,10 @@ FlowRouter.route('/', {
 FlowRouter.route('/admin', {
     name: 'Admin',
     subscriptions(params) {
-
+        Meteor.subscribe('projects');
     },
     action(params) {
-        renderMainLayoutWith(<C.UserLogin />);
+        renderMainLayoutWith(<C.Admin />);
     }
 });
 

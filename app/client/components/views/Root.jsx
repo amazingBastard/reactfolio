@@ -19,7 +19,7 @@ App.Root = React.createClass({
     render() {
         return (
             <main className="root view">
-                <div className="projects">
+                <div className="projects module">
                     {this.renderProjects()}
                 </div>
             </main>

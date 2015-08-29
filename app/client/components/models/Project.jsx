@@ -8,8 +8,8 @@ App.Project = React.createClass({
          return (
               <article className="project">
                    <h1 className="title">{this.props.project.title}</h1>
+                   <img className="image" src={this.props.project.image} />
                    <div className="content">
-                       <img className="image" src={this.props.project.image} />
                        {this.props.project.content}
                    </div>
               </article>

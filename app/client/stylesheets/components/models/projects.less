@@ -2,38 +2,42 @@
 
 // projects styles
 
-.projects {
+.projects.module {
   margin: @space-base auto;
 
   .project {
     position: relative;
     overflow: hidden;
     cursor: pointer;
-    height: 4em;
+    height: @fluid-quarter;
+    padding: @space-base;s
 
     .title {
-      margin: 0;
+      margin-bottom: 0;
+    }
+
+    .image {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: @full;
+      margin: 0 auto;
+      text-transform: none;
+      font-size: 90%;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.35s, transform 0.35s;
+      transform: translate3d(0,50px,0);
     }
 
     .content {
       margin-top: @space-base;
-      text-transform: none;
-      font-size: 90%;
-      opacity: 0;
-      transition: opacity 0.35s, transform 0.35s;
-      transform: translate3d(0,50px,0);
-
-      .image {
-        width: @full;
-        margin: 0 auto;
-      }
     }
 
     &:hover,
     &:focus {
-      height: auto;
 
-      .content {
+      .image {
         opacity: 1;
         transform: translate3d(0,0,0);
       }

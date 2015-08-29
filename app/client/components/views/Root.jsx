@@ -2,15 +2,15 @@ C.Root = React.createClass({
     // This mixin makes the getMeteorData method work
     mixins: [ReactMeteorData],
 
-    // Loads items from the Tasks collection and puts them on this.data.tasks
+    // Loads items from the Projects collection and puts them on this.data.projects
     getMeteorData() {
         return {
-            projects: Projects.find({}).fetch()
+            projects: Projects.find({}, {sort: {createdAt: -1}}).fetch()
         }
     },
 
     renderProjects() {
-         // Get tasks from this.data.tasks
+         // Get projects from this.data.projects
          return this.data.projects.map((project) => {
               return < C.Project key={project._id} project={project} />;
          });

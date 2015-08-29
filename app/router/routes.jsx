@@ -8,8 +8,8 @@ FlowRouter.route('/', {
     }
 });
 
-FlowRouter.route('/login', {
-    name: 'Login',
+FlowRouter.route('/admin', {
+    name: 'Admin',
     subscriptions(params) {
 
     },

@@ -1,8 +1,8 @@
 C.Project = React.createClass({
     propTypes: {
-        // This component gets the task to display through a React prop.
+        // This component gets the project to display through a React prop.
         // We can use propTypes to indicate it is required
-        task: React.PropTypes.object.isRequired
+        project: React.PropTypes.object.isRequired
     },
     render() {
          return (

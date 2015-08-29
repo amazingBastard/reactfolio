@@ -18,7 +18,7 @@ C.Header = React.createClass({
             )
         } else {
             loginButton = (
-                <a className="login icon button" href="/login"><i className="fa fa-sign-out"></i></a>
+                <a className="login icon button" href="/admin"><i className="fa fa-sign-out"></i></a>
             )
         }
 

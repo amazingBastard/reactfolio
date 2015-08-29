@@ -30,7 +30,7 @@ App.InsertProject = React.createClass({
                 <form className="insert project form" onSubmit={this.onSubmit} >
                     <input type="text" ref="title" placeholder="Title" />
                     <input type="text" ref="image" placeholder="Image" />
-                    <input type="text" ref="content" placeholder="Content" />
+                    <textarea type="text" ref="content" placeholder="Content"></textarea>
                     <input type="submit" className="primary submit project button"/>
                 </form>
             </div>

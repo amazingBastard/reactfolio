@@ -10,10 +10,22 @@ App.Admin = React.createClass({
          }
     },
     render() {
+         let form;
+         let { currentUser } = this.data;
+
+         if (currentUser) {
+             form = (
+                 <App.InsertProject / >
+             )
+         } else {
+             form = (
+                 <App.UserLogin />
+             )
+         }
+
          return (
               <main className="admin view">
-                    <App.UserLogin />
-                    <App.InsertProject / >
+                    {form}
               </main>
          )
     }

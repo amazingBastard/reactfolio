@@ -47,7 +47,7 @@ App.UserLogin = React.createClass({
 
                 return;
             } else {
-                FlowRouter.go('Root');
+                FlowRouter.go('Admin');
             }
         });
     },
@@ -57,8 +57,8 @@ App.UserLogin = React.createClass({
                 <h1 className="title">Login</h1>
                 <form className="admin login form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors} />
-                    <App.FormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
-                    <App.FormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
+                    <App.FormInput hasError={!!this.state.errors.email} name="Email" type="text" />
+                    <App.FormInput hasError={!!this.state.errors.password} name="Password" type="password" />
                     <input type="submit" className="primary submit login button"/>
                 </form>
             </div>

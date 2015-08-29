@@ -26,10 +26,12 @@ App.InsertProject = React.createClass({
     render() {
         return (
             <div className="new project">
-                <form className="insert project" onSubmit={this.onSubmit} >
+                <h1 className="title">New Project</h1>
+                <form className="insert project form" onSubmit={this.onSubmit} >
                     <input type="text" ref="title" placeholder="Title" />
                     <input type="text" ref="image" placeholder="Image" />
                     <input type="text" ref="content" placeholder="Content" />
+                    <input type="submit" className="primary submit project button"/>
                 </form>
             </div>
         )

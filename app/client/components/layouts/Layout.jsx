@@ -1,7 +1,7 @@
-C.MainLayout = React.createClass({
+C.Layout = React.createClass({
     render() {
         return (
-            <div>
+            <div className="layout">
                 {this.props.header}
 
                 {this.props.content}

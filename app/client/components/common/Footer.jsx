@@ -1,4 +1,4 @@
-C.MainFooter = React.createClass({
+C.Footer = React.createClass({
     render() {
         return (
             <div className="footer container">

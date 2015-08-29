@@ -1,15 +1,15 @@
-FlowRouter.route("/", {
-    name: 'Home',
+FlowRouter.route('/', {
+    name: 'Root',
     subscriptions(params) {
 
     },
     action(params) {
-        renderMainLayoutWith(<C.Home />);
+        renderMainLayoutWith(<C.Root />);
     }
 });
 
-FlowRouter.route("/login", {
-    name: "Login",
+FlowRouter.route('/login', {
+    name: 'Login',
     subscriptions(params) {
 
     },
@@ -19,9 +19,9 @@ FlowRouter.route("/login", {
 });
 
 function renderMainLayoutWith(component) {
-    ReactLayout.render(C.MainLayout, {
-        header: <C.MainHeader />,
+    ReactLayout.render(C.Layout, {
+        header: <C.Header />,
         content: component,
-        footer: <C.MainFooter />
+        footer: <C.Footer />
     });
 }

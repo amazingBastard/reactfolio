@@ -1,4 +1,4 @@
-C.UserLogin = React.createClass({
+App.UserLogin = React.createClass({
     mixins: [],
     PropTypes: {
 
@@ -59,9 +59,9 @@ C.UserLogin = React.createClass({
                         <h1>Login</h1>
 
                         <form onSubmit={this.onSubmit}>
-                            <C.AuthErrors errors={this.state.errors} />
-                            <C.FormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
-                            <C.FormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
+                            <App.AuthErrors errors={this.state.errors} />
+                            <App.FormInput hasError={!!this.state.errors.email} name="Email" type="text" label="Email" />
+                            <App.FormInput hasError={!!this.state.errors.password} name="Password" type="password" label="Password" />
                             <input type="submit" className="btn btn-default"/>
                         </form>
                     </div>

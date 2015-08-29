@@ -1,4 +1,4 @@
-C.Admin = React.createClass({
+App.Admin = React.createClass({
     // This mixin makes the getMeteorData method work
     mixins: [ReactMeteorData],
 
@@ -12,8 +12,8 @@ C.Admin = React.createClass({
     render() {
          return (
               <main className="admin view">
-                    <C.UserLogin />
-                    <C.InsertProject / >
+                    <App.UserLogin />
+                    <App.InsertProject / >
               </main>
          )
     }

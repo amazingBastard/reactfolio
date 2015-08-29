@@ -1,4 +1,4 @@
-C.FormInput = React.createClass({
+App.FormInput = React.createClass({
     propTypes: {
         hasError: React.PropTypes.bool,
         label: React.PropTypes.string,

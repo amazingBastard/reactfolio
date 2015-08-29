@@ -4,7 +4,7 @@ FlowRouter.route('/', {
         Meteor.subscribe('projects');
     },
     action(params) {
-        renderMainLayoutWith(<C.Root />);
+        renderMainLayoutWith(<App.Root />);
     }
 });
 
@@ -14,14 +14,14 @@ FlowRouter.route('/admin', {
         Meteor.subscribe('projects');
     },
     action(params) {
-        renderMainLayoutWith(<C.Admin />);
+        renderMainLayoutWith(<App.Admin />);
     }
 });
 
 function renderMainLayoutWith(component) {
-    ReactLayout.render(C.Layout, {
-        header: <C.Header />,
+    ReactLayout.render(App.Layout, {
+        header: <App.Header />,
         content: component,
-        footer: <C.Footer />
+        footer: <App.Footer />
     });
 }

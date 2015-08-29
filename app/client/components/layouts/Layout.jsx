@@ -1,4 +1,4 @@
-C.Layout = React.createClass({
+App.Layout = React.createClass({
     render() {
         return (
             <div className="layout">

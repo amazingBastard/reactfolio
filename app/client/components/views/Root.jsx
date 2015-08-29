@@ -1,4 +1,4 @@
-C.Root = React.createClass({
+App.Root = React.createClass({
     // This mixin makes the getMeteorData method work
     mixins: [ReactMeteorData],
 
@@ -12,7 +12,7 @@ C.Root = React.createClass({
     renderProjects() {
          // Get projects from this.data.projects
          return this.data.projects.map((project) => {
-              return < C.Project key={project._id} project={project} />;
+              return < App.Project key={project._id} project={project} />;
          });
     },
 

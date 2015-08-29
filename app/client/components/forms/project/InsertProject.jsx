@@ -1,4 +1,4 @@
-C.InsertProject = React.createClass({
+App.InsertProject = React.createClass({
     mixins: [],
     PropTypes: {
 
@@ -26,7 +26,7 @@ C.InsertProject = React.createClass({
     render() {
         return (
             <div className="new project">
-                <form className="insert project" onSubmit={this.handleSubmit} >
+                <form className="insert project" onSubmit={this.onSubmit} >
                     <input type="text" ref="title" placeholder="Title" />
                     <input type="text" ref="image" placeholder="Image" />
                     <input type="text" ref="content" placeholder="Content" />

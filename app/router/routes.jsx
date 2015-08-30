@@ -1,29 +1,33 @@
 FlowRouter.route('/', {
     name: 'Root',
     subscriptions(params) {
-        Meteor.subscribe('projects');
+        this.register('projects', Meteor.subscribe('projects'));
     },
-    action(params) {
-        renderMainLayoutWith(<App.Root />);
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.Root />
+        });
     }
 });
 
 FlowRouter.route('/admin', {
     name: 'Admin',
     subscriptions(params) {
-        Meteor.subscribe('projects');
+        this.register('projects', Meteor.subscribe('projects'));
     },
-    action(params) {
-        renderMainLayoutWith(<App.Admin />);
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.Admin />
+        });
     }
 });
 
 FlowRouter.route('/:projectId', {
     name: 'ViewProject',
     subscriptions(params) {
-        Meteor.subscribe('projects');
+        this.register('singlePost', Meteor.subscribe('singlePost', params._id));
     },
-    action(params) {
+    action() {
         renderMainLayoutWith(<App.ViewProject />);
     }
 });

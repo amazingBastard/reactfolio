@@ -12,7 +12,7 @@ App.ViewProject = React.createClass({
     render() {
         return (
             <main className="project view">
-                project view
+                <App.Project />
             </main>
         )
     }

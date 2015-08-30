@@ -2,11 +2,11 @@ App.Layout = React.createClass({
     render() {
         return (
             <div className="layout">
-                {this.props.header}
+                <App.Header />
 
                 {this.props.content}
 
-                {this.props.footer}
+                <App.Footer />
             </div>
         )
     }

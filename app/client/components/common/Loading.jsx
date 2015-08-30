@@ -2,24 +2,23 @@ App.Loading = React.createClass({
     render() {
         return (
             <div className="loading module">
-                <div className="body">
-  	                <span>
-      	                <span></span>
-      	                <span></span>
-                        <span></span>
-                        <span></span>
-                    </span>
-                    <div className="base">
-                        <span></span>
-
-                        <div className="face"></div>
+                <div className="space">
+  	                <div className="jetpack">
+      	                <span className="jet"></span>
+      	                <span className="jet"></span>
+                        <span className="jet"></span>
+                        <span className="jet"></span>
+                    </div>
+                    <div className="rocketman">
+                        <span className="limbs"></span>
+                        <div className="helmet"></div>
                     </div>
                 </div>
-                <div className="longfazers">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
+                <div className="streaks">
+                    <span className="streak"></span>
+                    <span className="streak"></span>
+                    <span className="streak"></span>
+                    <span className="streak"></span>
                 </div>
             </div>
         )

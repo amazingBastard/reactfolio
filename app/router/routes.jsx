@@ -20,7 +20,7 @@ FlowRouter.route('/:projectId', {
     name: 'Project',
     action: function(params) {
         ReactLayout.render(App.Project, {
-            content: <App.Project projectId={params._id} />
+            content: <App.Project projectId={params.projectId} />
         });
     }
 });

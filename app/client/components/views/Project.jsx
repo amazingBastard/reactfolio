@@ -21,7 +21,7 @@ App.Project = React.createClass({
     },
     render() {
         return (
-            <main className="project view">
+            <main className="animated fadeIn project view">
                 {this.data.project ? this.renderProject() : <App.Loading />}
             </main>
         )

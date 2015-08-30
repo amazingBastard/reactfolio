@@ -28,7 +28,7 @@ App.Root = React.createClass({
 
     render() {
         return (
-            <main className="root view">
+            <main className="animated fadeIn root view">
                 <div className="projects module">
                     {this.data.projects ? this.renderProjects() : <App.Loading />}
                 </div>

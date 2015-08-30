@@ -1,8 +1,5 @@
 App.Admin = React.createClass({
-    // This mixin makes the getMeteorData method work
     mixins: [ReactMeteorData],
-
-    // Loads items from the Projects collection and puts them on this.data.projects
     getMeteorData() {
          return {
               projects: Projects.find({}, {sort: {createdAt: -1}}).fetch(),
@@ -24,7 +21,7 @@ App.Admin = React.createClass({
          }
 
          return (
-              <main className="admin view">
+              <main className="animated fadeIn admin view">
                     {formModule}
               </main>
          )

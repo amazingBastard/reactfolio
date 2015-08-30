@@ -10,7 +10,7 @@
 
   .title {
     margin: 0;
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
     text-transform: uppercase;
     letter-spacing: @space-mini;
@@ -19,6 +19,10 @@
       color: @header-color;
       text-decoration: none;
       line-height: @line-height-base;
+
+      &:hover {
+        color: @highlight-color;
+      }
     }
   }
 

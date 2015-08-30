@@ -2,7 +2,7 @@ App.Project = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         var data = {},
-            projectId = this.props.projectId,
+            projectId = this.props._id,
             handle = Meteor.subscribe('project', projectId);
 
         if (handle.ready()) {

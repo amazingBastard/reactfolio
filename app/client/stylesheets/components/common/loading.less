@@ -3,178 +3,19 @@
 // loading styles
 
 .loading.module {
+  display: flex;
   position: fixed;
   top: 0;
   left: 0;
   width: @full;
   height: @full;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   z-index: 1;
 
-  .space {
-    position: absolute;
-    top: @half;
-    margin-left: -@space-huge;
-    left: @half;
-    animation: speeder @fast linear infinite;
-
-    .jetpack {
-      position: absolute;
-      top: -(@space-base + @space-mini);
-      left: @space-huge + @space-small;
-      height: @space-tiny;
-      width: @space-large + @space-mini;
-      background: @highlight-color;
-      border-radius: @space-mini @space-base @space-atomic 0;
-
-      .jet {
-        width: @space-large;
-        height: @space-quantum;
-        background: @offset-color;
-        position: absolute;
-        animation: fazer1 @faster linear infinite;
-
-        &:nth-child(2) {
-          top: @space-micro;
-          animation: fazer2 @fast linear infinite;
-        }
-
-        &:nth-child(3) {
-          top: @space-atomic;
-          animation: fazer3 @fast linear infinite;
-          animation-delay: -@slow;
-        }
-
-        &:nth-child(4) {
-          top: @space-mini;
-          animation: fazer4 @slow linear infinite;
-          animation-delay: -@slow;
-        }
-      }
-    }
-
-    .rocketman {
-
-      .limbs {
-        position: absolute;
-        width: 0;
-        height: 0;
-        border-top: @space-tiny - @space-atomic solid transparent;
-        border-right: @space-giant solid @primary-color;
-        border-bottom: @space-tiny - @space-atomic solid transparent;
-
-        &:before {
-          content: "";
-          position: absolute;
-          width: 0;
-          height: 0;
-          border-top: 0 solid transparent;
-          border-right: @space-huge + @space-tiny solid @primary-color;
-          border-bottom: @space-small solid transparent;
-          top: -@space-base;
-          right: -@space-giant;
-        }
-
-        &:after {
-          content: "";
-          height: @space-base + @space-mini + @space-atomic;
-          width: @space-base + @space-mini + @space-atomic;
-          border-radius: @half;
-          background: @primary-color;
-          position: absolute;
-          right: -(@space-giant + @space-small);
-          top: -@space-base;
-        }
-      }
-
-      .helmet {
-        position: absolute;
-        height: 16px;
-        width: 20px;
-        background: #fa6900;
-        border-radius: 20px 20px 0 0;
-        transform: rotate(-40deg);
-        right: -127px;
-        top: -17px;
-
-        &:after {
-          content: "";
-          height: 18px;
-          width: 18px;
-          background: #69d2e7;
-          right: 3px;
-          top: 6px;
-          position: absolute;
-          transform: rotate(40deg);
-          transform-origin: 50% 50%;
-          border-radius: 50%;
-        }
-      }
-    }
-  }
-
-  .streaks {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-
-    .streak {
-      position: absolute;
-      height: 2px;
-      width: 20%;
-      background: #000;
-
-      &:nth-child(1) {
-        top: 20%;
-        animation: lf .6s linear infinite;
-        animation-delay: -5s;
-      }
-
-      &:nth-child(2) {
-        top: 40%;
-        animation: lf2 .8s linear infinite;
-        animation-delay: -1s;
-      }
-
-      &:nth-child(3) {
-        top: 60%;
-        animation: lf3 .6s linear infinite;
-      }
-
-      &:nth-child(4) {
-        top: 80%;
-        animation: lf4 .5s linear infinite;
-        animation-delay: -3s;
-      }
-    }
+  .image.loader {
+    margin: 0;
+    width: @space-god;
   }
 }
-
-// animation keyframes
-
-@keyframes fazer1 {0% {left: 0;} 100% {left: -80px;opacity: 0;}}
-
-@keyframes fazer2 {0% {left: 0;} 100% {left: -100px;opacity: 0;}}
-
-@keyframes fazer3 {0% {left: 0;} 100% {left: -50px;opacity: 0;}}
-
-@keyframes fazer4 {0% {left: 0;} 100% {left: -150px;opacity: 0;}}
-
-@keyframes speeder {
-  0% { transform: translate(2px, 1px) rotate(0deg); }
-  10% { transform: translate(-1px, -3px) rotate(-1deg); }
-  20% { transform: translate(-2px, 0px) rotate(1deg); }
-  30% { transform: translate(1px, 2px) rotate(0deg); }
-  40% { transform: translate(1px, -1px) rotate(1deg); }
-  50% { transform: translate(-1px, 3px) rotate(-1deg); }
-  60% { transform: translate(-1px, 1px) rotate(0deg); }
-  70% { transform: translate(3px, 1px) rotate(-1deg); }
-  80% { transform: translate(-2px, -1px) rotate(1deg); }
-  90% { transform: translate(2px, 1px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
-}
-
-@keyframes lf {0% {left: 200%;} 100% {left: -200%;opacity: 0;}}
-@keyframes lf2 {0% {left: 200%;} 100% {left: -200%;opacity: 0;}}
-@keyframes lf3 {0% {left: 200%;} 100% {left: -100%;opacity: 0;}}
-@keyframes lf4 {0% {left: 200%;} 100% {left: -100%;opacity: 0;}}

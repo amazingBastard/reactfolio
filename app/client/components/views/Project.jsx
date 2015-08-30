@@ -1,11 +1,12 @@
 App.Project = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
-        var handle = Meteor.subscribe('project', this.props._id),
-            data = {};
+        var data = {},
+            projectId = this.props.projectId,
+            handle = Meteor.subscribe('project', projectId);
 
-        if(handle.ready()) {
-            data.project = Projects.findOne({_id: this.props._id});
+        if (handle.ready()) {
+            data.project = Projects.findOne({_id: projectId});
         }
 
         return data;
@@ -21,7 +22,7 @@ App.Project = React.createClass({
     render() {
         return (
             <main className="project view">
-                {(this.data.project)? this.renderProject() : 'loading...'}
+                {this.data.project ? this.renderProject() : 'loading...'}
             </main>
         )
     }

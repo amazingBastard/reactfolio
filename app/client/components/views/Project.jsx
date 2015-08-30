@@ -22,7 +22,7 @@ App.Project = React.createClass({
     render() {
         return (
             <main className="project view">
-                {this.data.project ? this.renderProject() : 'loading...'}
+                {this.data.project ? this.renderProject() : <App.Loading />}
             </main>
         )
     }

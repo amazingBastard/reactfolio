@@ -30,7 +30,7 @@ App.Root = React.createClass({
         return (
             <main className="root view">
                 <div className="projects module">
-                    {this.data.projects ? this.renderProjects() : 'loading...'}
+                    {this.data.projects ? this.renderProjects() : <App.Loading />}
                 </div>
             </main>
         )

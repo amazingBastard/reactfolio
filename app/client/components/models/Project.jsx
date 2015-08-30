@@ -6,13 +6,13 @@ App.Project = React.createClass({
     },
     render() {
          return (
-              <article className="project">
+              <a className="project" href="#">
                    <h1 className="title">{this.props.project.title}</h1>
                    <img className="image" src={this.props.project.image} />
                    <div className="content">
                        {this.props.project.content}
                    </div>
-              </article>
+              </a>
          );
     }
 });

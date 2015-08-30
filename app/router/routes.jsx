@@ -18,6 +18,16 @@ FlowRouter.route('/admin', {
     }
 });
 
+FlowRouter.route('/:projectId', {
+    name: 'ViewProject',
+    subscriptions(params) {
+        Meteor.subscribe('projects');
+    },
+    action(params) {
+        renderMainLayoutWith(<App.ViewProject />);
+    }
+});
+
 function renderMainLayoutWith(component) {
     ReactLayout.render(App.Layout, {
         header: <App.Header />,

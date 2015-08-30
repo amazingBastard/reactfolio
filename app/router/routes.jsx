@@ -1,8 +1,5 @@
 FlowRouter.route('/', {
     name: 'Root',
-    subscriptions(params) {
-        this.register('projects', Meteor.subscribe('projects'));
-    },
     action() {
         ReactLayout.render(App.Layout, {
             content: <App.Root />
@@ -12,9 +9,6 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/admin', {
     name: 'Admin',
-    subscriptions(params) {
-        this.register('projects', Meteor.subscribe('projects'));
-    },
     action() {
         ReactLayout.render(App.Layout, {
             content: <App.Admin />
@@ -22,20 +16,11 @@ FlowRouter.route('/admin', {
     }
 });
 
-FlowRouter.route('/:projectId', {
-    name: 'ViewProject',
-    subscriptions(params) {
-        this.register('singlePost', Meteor.subscribe('singlePost', params._id));
-    },
-    action() {
-        renderMainLayoutWith(<App.ViewProject />);
+FlowRouter.route('/:_id', {
+    name: 'Project',
+    action: function(params) {
+        ReactLayout.render(App.Project, {
+            content: <App.Project _id={params._id} />
+        });
     }
 });
-
-function renderMainLayoutWith(component) {
-    ReactLayout.render(App.Layout, {
-        header: <App.Header />,
-        content: component,
-        footer: <App.Footer />
-    });
-}

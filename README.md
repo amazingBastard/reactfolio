@@ -65,9 +65,6 @@ Have a look at the repository for more information.
 * Accounts
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
 * Collections
-  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
-  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
-  * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
 * Routing
   * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)

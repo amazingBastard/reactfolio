@@ -1,0 +1,97 @@
+@import '../../variables';
+
+// root styles
+
+.view.root {
+  padding: 0;
+
+  .projects.module {
+    margin: @space-base auto;
+
+    .project {
+      display: block;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      height: @fluid-third;
+      margin: 0;
+      padding: @space-base;
+      text-decoration: none;
+
+      @media (min-width: @desktop-width) {
+        padding-left: @eighth;
+        padding-right: @eighth;
+      }
+
+      @media (min-width: @jumbo-desktop-width) {
+        padding-left: @eighth + @sixteenth;
+        padding-right: @eighth + @sixteenth;
+      }
+
+      @media (min-width: @massive-desktop-width) {
+        padding-left: @quarter;
+        padding-right: @quarter;
+      }
+
+      .title {
+        margin: @space-small 0 @space-mini;
+        font-weight: 300;
+        text-transform: lowercase;
+        letter-spacing: @space-atomic;
+        transition: all @fast;
+      }
+
+      .image {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: @full;
+        margin: 0 auto;
+        text-transform: none;
+        opacity: 0;
+        z-index: -1;
+        transition: all @fast;
+        transform: translate3d(0, @eighth, 0);
+
+        @media (min-width: @desktop-width) {
+          width: @three-quarters;
+        }
+
+        @media (min-width: @large-desktop-width) {
+          width: @half;
+        }
+
+        @media (min-width: @jumbo-desktop-width) {
+          width: @third;
+        }
+
+        @media (min-width: @massive-desktop-width) {
+          width: @half;
+        }
+      }
+
+      .content {
+        color: @font-color;
+        transition: all @fast;
+      }
+
+      &:hover,
+      &:focus {
+        box-shadow: inset 0 -@space-atomic @space-mini 0 @neutral-color;
+
+        .title {
+          color: @link-color;
+        }
+
+        .image {
+          opacity: 1;
+          transform: translate3d(0, 0, 0);
+        }
+
+        .content {
+          color: @header-color;
+        }
+      }
+    }
+  }
+}

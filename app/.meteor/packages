@@ -32,4 +32,4 @@ momentjs:moment
 msavin:mongol
 flemay:less-autoprefixer
 fortawesome:fontawesome
-kadira:flow-router-ssr
+kadira:flow-router

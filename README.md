@@ -70,7 +70,7 @@ Have a look at the repository for more information.
   * [matb33:collection-hooks](https://github.com/matb33/meteor-collection-hooks)
   * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
 * Routing
-  * [kadira:flow-router](https://github.com/kadirahq/flow-router)
+  * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
   * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
   * [arillo:flow-router-helpers](https://github.com/arillo/meteor-flow-router-helpers/)

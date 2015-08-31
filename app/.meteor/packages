@@ -20,7 +20,6 @@ accounts-password
 
 # sanjo:jasmine
 # velocity:html-reporter
-kadira:flow-router
 check
 meteorhacks:fast-render
 arillo:flow-router-helpers
@@ -33,3 +32,4 @@ momentjs:moment
 msavin:mongol
 flemay:less-autoprefixer
 fortawesome:fontawesome
+kadira:flow-router-ssr

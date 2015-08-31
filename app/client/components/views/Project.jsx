@@ -6,7 +6,7 @@ App.Project = React.createClass({
             handle = Meteor.subscribe('project', projectId);
 
         if (handle.ready()) {
-            data.project = Projects.findOne({_id: projectId});
+            data.project = Projects.findOne(projectId);
         }
 
         return data;

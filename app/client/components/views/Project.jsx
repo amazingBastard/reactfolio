@@ -2,11 +2,10 @@ App.Project = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         var data = {},
-            projectId = this.props._id,
-            handle = Meteor.subscribe('project', projectId);
+            handle = Meteor.subscribe('project', this.props._id);
 
         if (handle.ready()) {
-            data.project = Projects.findOne(projectId);
+            data.project = Projects.findOne({_id: this.props._id});
         }
 
         return data;
@@ -22,7 +21,7 @@ App.Project = React.createClass({
     render() {
         return (
             <main className="animated fadeIn project view">
-                {this.data.project ? this.renderProject() : <App.Loading />}
+                {(this.data.project) ? this.renderProject() : <App.Loading />}
             </main>
         )
     }

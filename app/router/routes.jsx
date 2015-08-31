@@ -16,11 +16,11 @@ FlowRouter.route('/admin', {
     }
 });
 
-FlowRouter.route('/:projectId', {
+FlowRouter.route('/projects/:_id', {
     name: 'Project',
     action: function(params) {
         ReactLayout.render(App.Project, {
-            content: <App.Project projectId={params.projectId} />
+            content: <App.Project _id={params._id} />
         });
     }
 });

@@ -14,7 +14,7 @@ App.Root = React.createClass({
 
     renderProjects() {
         return this.data.projects.map(function (project) {
-            var path = FlowRouter.path('Project', {projectId: project._id});
+            var path = FlowRouter.path('Project', {_id: project._id});
             return <a className="project" key={project._id} href={path}>
                        <h1 className="title">{project.title}</h1>
                        <img className="image" src={project.image}/>
@@ -30,7 +30,7 @@ App.Root = React.createClass({
         return (
             <main className="animated fadeIn root view">
                 <div className="projects module">
-                    {this.data.projects ? this.renderProjects() : <App.Loading />}
+                    {(this.data.projects) ? this.renderProjects() : <App.Loading />}
                 </div>
             </main>
         )

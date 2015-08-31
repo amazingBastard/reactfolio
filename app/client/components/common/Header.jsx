@@ -29,7 +29,7 @@ App.Header = React.createClass({
         }
 
         return (
-            <header className="header">
+            <header className="animated fadeInDown header">
                 <h1 className="title"><a className="route" href="/">Reactfolio</a></h1>
                 {buttons}
             </header>

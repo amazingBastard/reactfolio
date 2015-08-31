@@ -73,8 +73,6 @@ Have a look at the repository for more information.
   * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
   * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
-  * [arillo:flow-router-helpers](https://github.com/arillo/meteor-flow-router-helpers/)
-  * [zimme:active-route](https://github.com/zimme/meteor-active-route)
 * SEO
   * [spiderable](http://github.com/meteor/meteor/tree/devel/packages/spiderable)
   * [tomwasd:flow-router-seo](https://github.com/tomwasd/flow-router-seo)

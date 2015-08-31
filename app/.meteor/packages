@@ -22,8 +22,6 @@ accounts-password
 # velocity:html-reporter
 check
 meteorhacks:fast-render
-arillo:flow-router-helpers
-zimme:active-route
 spiderable
 tomwasd:flow-router-seo
 fastclick

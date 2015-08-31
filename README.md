@@ -64,8 +64,6 @@ Have a look at the repository for more information.
   * [meteor-platform](http://github.com/meteor/meteor/tree/devel/packages/meteor-platform)
 * Accounts
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
-* Collections
-  * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
 * Routing
   * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
@@ -80,6 +78,7 @@ Have a look at the repository for more information.
 * Development
   * [http](http://github.com/meteor/meteor/tree/devel/packages/http)
   * [underscore](http://github.com/meteor/meteor/tree/devel/packages/underscore)
+  * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
   * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
   * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
   * [momentjs:moment](http://github.com/moment/moment/)

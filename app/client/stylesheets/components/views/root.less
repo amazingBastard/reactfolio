@@ -57,8 +57,9 @@
         }
       }
 
-      .content {
+      .description {
         height: @fluid-third;
+        margin: 0;
         overflow: hidden;
         color: @font-color;
         transition: all @fast;
@@ -77,23 +78,23 @@
           transform: translate3d(0, 0, 0);
         }
 
-        .content {
+        .description {
           color: @header-color;
 
           @media (min-width: @tablet-width) {
-            width: @three-quarters;
+            margin-right: @quarter;
           }
 
           @media (min-width: @large-desktop-width) {
-            width: @three-quarters + 10%;
+            margin-right: @eighth;
           }
 
           @media (min-width: @huge-desktop-width) {
-            width: @full - 5%;
+            margin-right: @sixteenth;
           }
 
           @media (min-width: @jumbo-desktop-width) {
-            width: @full;
+            margin-right: 0;
           }
         }
       }

@@ -13,9 +13,8 @@
       position: relative;
       overflow: hidden;
       cursor: pointer;
-      height: @fluid-third;
       margin: 0;
-      padding: @space-base;
+      padding: @space-huge @space-base;
       text-decoration: none;
 
       @media (min-width: @desktop-width) {
@@ -34,7 +33,6 @@
       }
 
       .title {
-        margin: @space-small 0 @space-mini;
         transition: all @fast;
       }
 
@@ -60,6 +58,8 @@
       }
 
       .content {
+        height: @fluid-third;
+        overflow: hidden;
         color: @font-color;
         transition: all @fast;
       }

@@ -18,9 +18,7 @@ App.Root = React.createClass({
             return <a className="project" key={project._id} href={path}>
                        <h1 className="title">{project.title}</h1>
                        <img className="image" src={project.image}/>
-                       <div className="content">
-                           {project.content}
-                       </div>
+                       <p className="content">{project.content}</p>
                     </a>;
 
         });

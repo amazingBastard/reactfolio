@@ -42,7 +42,7 @@
         position: absolute;
         bottom: 0;
         right: 0;
-        width: @full;
+        width: @half;
         margin: 0 auto;
         text-transform: none;
         opacity: 0;
@@ -50,20 +50,8 @@
         transition: all @fast;
         transform: translate3d(0, @eighth, 0);
 
-        @media (min-width: @desktop-width) {
-          width: @three-quarters;
-        }
-
-        @media (min-width: @large-desktop-width) {
-          width: @half;
-        }
-
-        @media (min-width: @jumbo-desktop-width) {
-          width: @third;
-        }
-
-        @media (min-width: @massive-desktop-width) {
-          width: @half;
+        @media (min-width: @phone-width) {
+          width: @fluid-third;
         }
       }
 

@@ -33,6 +33,8 @@
       }
 
       .title {
+        padding-bottom: @space-micro;
+        border-bottom: @space-atomic solid @header-color;
         transition: all @fast;
       }
 
@@ -70,7 +72,10 @@
         box-shadow: inset 0 -@space-atomic @space-mini 0 @neutral-color;
 
         .title {
+          border-color: @link-color;
           color: @link-color;
+          text-align: right;
+          letter-spacing: @space-mini;
         }
 
         .image {

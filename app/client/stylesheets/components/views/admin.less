@@ -1,0 +1,40 @@
+@import '../../variables';
+
+// admin styles
+
+.view.admin {
+
+  .projects.module {
+    margin: @space-base auto;
+
+    .project {
+      display: block;
+      margin: 0;
+      padding: @space-base 0;
+      border-bottom: @space-atomic solid @divider-color;
+
+      .title {
+        margin: 0;
+      }
+
+      &:last-child {
+        border: 0;
+      }
+      
+      &:hover,
+      &:focus {
+        text-decoration: none;
+
+        .title {
+          color: @link-color;
+        }
+      }
+    }
+  }
+
+  .new.project.button {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+  }
+}

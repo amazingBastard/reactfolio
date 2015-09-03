@@ -33,6 +33,7 @@ App.Admin = React.createClass({
                 <div className="projects module">
                     {(this.data.projects) ? this.renderProjects() : <App.Loading />}
                 </div>
+                <a className="fluid primary new project button" href="/admin/new">New Project</a>
             </main>
         )
 

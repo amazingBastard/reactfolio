@@ -1,29 +1,39 @@
 App.Admin = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
-         return {
-              projects: Projects.find({}, {sort: {createdAt: -1}}).fetch(),
-              currentUser: Meteor.user()
-         }
+        var data = {},
+            selector = {username: 'admin'},
+            handle = Meteor.subscribe('projects', selector);
+
+        if (handle.ready()) {
+            data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
+        }
+
+        return {
+            data,
+            currentUser: Meteor.user()
+        };
     },
+
     render() {
-         let dashboard;
-         let { currentUser } = this.data;
+        let dashboard;
+        let { currentUser } = this.data;
 
-         if (currentUser) {
-             dashboard = (
-                 <App.InsertProject />
-             )
-         } else {
-             dashboard = (
-                 <App.AdminLogin />
-             )
-         }
+        if (currentUser) {
+            dashboard = (
 
-         return (
-              <main className="animated fadeIn admin view">
-                    {dashboard}
-              </main>
-         )
+                <App.InsertProject />
+            )
+        } else {
+            dashboard = (
+                <App.AdminLogin />
+            )
+        }
+
+        return (
+            <main className="animated fadeIn admin view">
+                {dashboard}
+            </main>
+        )
     }
 });

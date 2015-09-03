@@ -16,6 +16,15 @@ FlowRouter.route('/admin', {
     }
 });
 
+FlowRouter.route('/admin/:_id', {
+    name: 'EditProject',
+    action() {
+        ReactLayout.render(App.Layout, {
+            content: <App.EditProject _id={params._id} />
+        });
+    }
+});
+
 FlowRouter.route('/:_id', {
     name: 'Project',
     action: function(params) {

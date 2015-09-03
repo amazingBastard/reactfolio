@@ -15,6 +15,7 @@ App.InsertProject = React.createClass({
         var self = this,
             title = $(event.target).find('[name=title]').val(),
             image = $(event.target).find('[name=image]').val(),
+            description = $(event.target).find('[name=description]').val(),
             content = $(event.target).find('[name=content]').val(),
             errors = {};
 
@@ -24,6 +25,10 @@ App.InsertProject = React.createClass({
 
         if (!image) {
             errors.image = 'Image url is required'
+        }
+
+        if (!description) {
+            errors.description = 'Description is required'
         }
 
         if (!content) {
@@ -38,7 +43,7 @@ App.InsertProject = React.createClass({
             return;
         }
 
-        Meteor.call('insertProject', title, image, content, (err) => {
+        Meteor.call('insertProject', title, image, description, content, (err) => {
             if (err) {
                 self.setState({
                     errors: {'none': err.reason}
@@ -59,12 +64,14 @@ App.InsertProject = React.createClass({
 
                 <form className="insert project form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors}/>
-                    <App.FormInput hasError={!!this.state.errors.title} label="none" icon="fa fa-book" name="Title"
+                    <App.FormInput hasError={!!this.state.errors.title} label="icon" icon="fa fa-book" name="Title"
                                    type="text" placeholder="project title"/>
-                    <App.FormInput hasError={!!this.state.errors.image} label="none" icon="fa fa-picture-o" name="Image"
+                    <App.FormInput hasError={!!this.state.errors.image} label="icon" icon="fa fa-picture-o" name="Image"
                                    type="text" placeholder="image url"/>
-                    <App.FormInput hasError={!!this.state.errors.content} label="none" icon="fa fa-pencil"
-                                   name="Content" type="textarea" placeholder="content"/>
+                    <App.FormInput hasError={!!this.state.errors.description} label="icon" icon="fa fa-pencil"
+                                   name="Description" type="textarea" placeholder="Project description"/>
+                    <App.FormInput hasError={!!this.state.errors.content} label="icon" icon="fa fa-pencil"
+                                   name="Content" type="textarea" placeholder="Write about your project"/>
                     <button type="submit" className="primary fluid submit project button"><i
                         className="fa fa-download"></i></button>
                 </form>

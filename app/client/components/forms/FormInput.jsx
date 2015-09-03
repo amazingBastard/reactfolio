@@ -40,7 +40,7 @@ App.FormInput = React.createClass({
 
         return (
             <div className={ className }>
-                { label === 'none' ?
+                { label === 'icon' ?
                     <span className="icon"><i className={ icon }></i></span>
                     :
                     <label htmlFor={ name.toLowerCase() } className="label">{ name }</label> }

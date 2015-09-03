@@ -18,12 +18,18 @@ App.Admin = React.createClass({
         //};
     },
 
+    deleteThisProject(event) {
+        event.preventDefault();
+        console.log('delete this project');
+        Meteor.call('removeProject', this.props.project._id);
+    },
+
     renderProjects() {
         return this.data.projects.map(function (project) {
             var path = FlowRouter.path('EditProject', {_id: project._id});
             return <a className="project" key={project._id} href={path}>
                        <h1 className="title">{project.title}</h1>
-                       <button type="button" className="remove project icon button"><i className="fa fa-ban"></i></button>
+                       <button type="button" className="remove project icon button" onClick={this.deleteThisProject}><i className="fa fa-ban"></i></button>
                    </a>;
         });
     },

@@ -7,22 +7,22 @@ App.Admin = React.createClass({
          }
     },
     render() {
-         let gate;
+         let dashboard;
          let { currentUser } = this.data;
 
          if (currentUser) {
-             gate = (
+             dashboard = (
                  <App.InsertProject />
              )
          } else {
-             gate = (
+             dashboard = (
                  <App.AdminLogin />
              )
          }
 
          return (
               <main className="animated fadeIn admin view">
-                    {gate}
+                    {dashboard}
               </main>
          )
     }

@@ -20,9 +20,10 @@ App.Admin = React.createClass({
 
     renderProjects() {
         return this.data.projects.map(function (project) {
-            var path = FlowRouter.path('Project', {_id: project._id});
+            var path = FlowRouter.path('EditProject', {_id: project._id});
             return <a className="project" key={project._id} href={path}>
                        <h1 className="title">{project.title}</h1>
+                       <button type="button" className="remove project icon button"><i className="fa fa-ban"></i></button>
                    </a>;
         });
     },

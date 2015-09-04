@@ -6,6 +6,7 @@
 
   .projects.module {
     margin: @space-base auto;
+    padding: 0;
 
     .project {
       display: block;
@@ -14,11 +15,23 @@
       padding: @space-base 0;
       border-bottom: @space-atomic solid @divider-color;
 
-      .title {
-        margin: 0;
+      .path {
+
+        .title {
+          margin: 0;
+        }
+
+        &:hover,
+        &:focus {
+          text-decoration: none;
+
+          .title {
+            color: @link-color;
+          }
+        }
       }
 
-      .remove.project {
+      .remove.project.button {
         position: absolute;
         top: 0;
         right: 0;
@@ -27,15 +40,6 @@
 
       &:last-child {
         border: 0;
-      }
-      
-      &:hover,
-      &:focus {
-        text-decoration: none;
-
-        .title {
-          color: @link-color;
-        }
       }
     }
   }

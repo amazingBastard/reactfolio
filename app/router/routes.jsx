@@ -17,7 +17,7 @@ FlowRouter.route('/admin', {
 });
 
 FlowRouter.route('/admin/new', {
-    name: 'NewProject',
+    name: 'ProjectNew',
     action() {
         ReactLayout.render(App.Layout, {
             content: <App.NewProject />
@@ -26,10 +26,10 @@ FlowRouter.route('/admin/new', {
 });
 
 FlowRouter.route('/admin/:_id', {
-    name: 'EditProject',
+    name: 'ProjectEdit',
     action() {
         ReactLayout.render(App.Layout, {
-            content: <App.EditProject _id={params._id} />
+            content: <App.ProjectEdit _id={params._id} />
         });
     }
 });

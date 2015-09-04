@@ -7,7 +7,6 @@ App.Admin = React.createClass({
 
         if (handle.ready()) {
             data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
-            data.currentUser = Meteor.user();
         }
 
         return data;
@@ -18,7 +17,7 @@ App.Admin = React.createClass({
         //};
     },
 
-    deleteThisProject(event) {
+    removeThisProject(event) {
         event.preventDefault();
         console.log('delete this project');
         Meteor.call('removeProject', this.props.project._id);
@@ -26,20 +25,22 @@ App.Admin = React.createClass({
 
     renderProjects() {
         return this.data.projects.map(function (project) {
-            var path = FlowRouter.path('EditProject', {_id: project._id});
-            return <a className="project" key={project._id} href={path}>
-                       <h1 className="title">{project.title}</h1>
-                       <button type="button" className="remove project icon button" onClick={this.deleteThisProject}><i className="fa fa-ban"></i></button>
-                   </a>;
+            var path = FlowRouter.path('ProjectEdit', {_id: project._id});
+            return <li className="project" key={project._id}>
+                       <a className="path" href={path}>
+                            <h1 className="title">{project.title}</h1>
+                       </a>
+                       <button type="button" className="remove project icon button" onClick={this.removeThisProject}><i className="fa fa-ban"></i></button>
+                   </li>;
         });
     },
 
     render() {
         return (
             <main className="animated fadeIn admin view">
-                <div className="projects module">
+                <ul className="projects module">
                     {(this.data.projects) ? this.renderProjects() : <App.Loading />}
-                </div>
+                </ul>
                 <a className="fluid primary new project button" href="/admin/new">New Project</a>
             </main>
         )

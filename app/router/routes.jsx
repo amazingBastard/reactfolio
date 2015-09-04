@@ -20,7 +20,7 @@ FlowRouter.route('/admin/new', {
     name: 'ProjectNew',
     action() {
         ReactLayout.render(App.Layout, {
-            content: <App.NewProject />
+            content: <App.ProjectNew />
         });
     }
 });

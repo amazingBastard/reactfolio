@@ -1,5 +1,6 @@
 App.ProjectEdit = React.createClass({
     mixins: [ReactMeteorData],
+    PropTypes: {},
     getMeteorData() {
         var data = {},
             handle = Meteor.subscribe('project', this.props._id);

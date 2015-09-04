@@ -1,5 +1,5 @@
 App.UpdateProject = React.createClass({
-    mixins: [],
+    mixins: [ReactMeteorData],
     PropTypes: {},
     getInitialState() {
         return {

@@ -15,14 +15,21 @@
     text-align: center;
     text-transform: uppercase;
     letter-spacing: @space-mini;
+    transition: all @fast;
 
     .route {
       color: @header-color;
       font-family: @font-family-header;
       text-decoration: none;
       line-height: @line-height-base;
+    }
 
-      &:hover {
+    &:hover,
+    &:focus {
+      font-weight: bold;
+      letter-spacing: @space-tiny;
+
+      .route {
         color: @highlight-color;
       }
     }

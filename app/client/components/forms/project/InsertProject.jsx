@@ -59,10 +59,10 @@ App.InsertProject = React.createClass({
     },
     render() {
         return (
-            <div className="insert project form module">
+            <div className="insert form module">
                 <h1 className="title"><i className="fa fa-terminal"></i>New Project</h1>
 
-                <form className="insert project form" onSubmit={this.onSubmit}>
+                <form className="insert form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors}/>
                     <App.FormInput hasError={!!this.state.errors.title} label="icon" icon="fa fa-book" name="Title"
                                    type="text" placeholder="project title"/>
@@ -72,7 +72,7 @@ App.InsertProject = React.createClass({
                                    name="Description" type="textarea" placeholder="Project description"/>
                     <App.FormInput hasError={!!this.state.errors.content} label="icon" icon="fa fa-pencil"
                                    name="Content" type="textarea" placeholder="Write about your project"/>
-                    <button type="submit" className="primary fluid submit project button"><i
+                    <button type="submit" className="primary fluid insert button"><i
                         className="fa fa-download"></i></button>
                 </form>
             </div>

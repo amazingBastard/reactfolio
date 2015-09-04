@@ -18,9 +18,9 @@ App.Admin = React.createClass({
     },
 
     removeThisProject(event) {
-        event.preventDefault();
         console.log('delete this project');
-        Meteor.call('removeProject', this.props.project._id);
+        Meteor.call('removeProject', this.props.projects._id);
+        event.preventDefault();
     },
 
     renderProjects() {

@@ -16,7 +16,7 @@ App.Header = React.createClass({
             buttons = (
                 <div className="buttons">
                     <a className="admin icon button" href="/admin"><i className="fa fa-user"></i></a>
-                    <button className="login icon button" onClick={this.handleLogout}><i className="fa fa-sign-out"></i>
+                    <button className="logout icon button" onClick={this.handleLogout}><i className="fa fa-sign-out"></i>
                     </button>
                 </div>
             )
@@ -30,7 +30,7 @@ App.Header = React.createClass({
 
         return (
             <header className="animated fadeInDown header">
-                <h1 className="title"><a className="route" href="/">Reactfolio</a></h1>
+                <h1 className="title"><a className="route" href="/"><span className="brand font">React</span>folio</a></h1>
                 {buttons}
             </header>
         )

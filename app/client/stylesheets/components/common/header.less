@@ -22,6 +22,10 @@
       font-family: @font-family-header;
       text-decoration: none;
       line-height: @line-height-base;
+
+      .brand {
+        color: @header-color;
+      }
     }
 
     &:hover,
@@ -31,6 +35,10 @@
 
       .route {
         color: @highlight-color;
+
+        .brand {
+          color: @primary-color;
+        }
       }
     }
   }
@@ -50,6 +58,14 @@
       &.admin {
         left: 0;
         right: auto;
+      }
+
+      &.logout {
+
+        &:hover,
+        &:focus {
+          color: @highlight-color;
+        }
       }
     }
   }

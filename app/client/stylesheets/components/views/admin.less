@@ -38,6 +38,41 @@
         top: 0;
         right: 0;
         z-index: 1;
+        padding: @space-small - @space-quantum 0;
+        font-size: @font-size-base + @font-size-tiny;
+
+        @media (min-width: @tablet-width) {
+          font-size: @font-size-base + @font-size-small;
+        }
+
+        @media (min-width: @desktop-width) {
+          font-size: @font-size-large;
+        }
+
+        @media (min-width: @large-desktop-width) {
+          font-size: @font-size-large + @font-size-mini;
+        }
+
+        @media (min-width: @huge-desktop-width) {
+          font-size: @font-size-large + @font-size-tiny;
+        }
+
+        @media (min-width: @jumbo-desktop-width) {
+          font-size: @font-size-large + @font-size-small;
+        }
+
+        @media (min-width: @giant-desktop-width) {
+          font-size: @font-size-huge;
+        }
+
+        @media (min-width: @massive-desktop-width) {
+          font-size: @font-size-huge + @font-size-mini;
+        }
+
+        &:hover,
+        &:focus {
+          color: @highlight-color;
+        }
       }
 
       &:last-child {

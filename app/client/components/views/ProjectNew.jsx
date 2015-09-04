@@ -6,18 +6,10 @@ App.ProjectNew = React.createClass({
         };
     },
     render() {
-        if (this.data.currentUser) {
-            return (
-                <main className="animated fadeIn admin new project view">
-                    <App.InsertProject />
-                </main>
-            )
-        } else {
-            return (
-                <main className="animated fadeIn admin new project view">
-                    <App.AdminLogin />
-                </main>
-            )
-        }
+        return (
+            <main className="animated fadeIn admin new project view">
+                {(this.data.currentUser) ? <App.InsertProject /> : <App.AdminLogin />}
+            </main>
+        )
     }
 });

@@ -36,16 +36,20 @@ App.Admin = React.createClass({
 
     render() {
         if (this.data.currentUser) {
-            return <main className="animated fadeIn admin view">
-                <ul className="projects module">
-                    {(this.data.projects) ? this.renderProjects() : <App.Loading />}
-                </ul>
-                < a className="fluid primary new project button" href="/admin/new">New Project</a>
-            </main>
+            return (
+                <main className="animated fadeIn admin view">
+                    <ul className="projects module">
+                        {(this.data.projects) ? this.renderProjects() : <App.Loading />}
+                    </ul>
+                    < a className="fluid primary new project button" href="/admin/new">New Project</a>
+                </main>
+            )
         } else {
-            return <main className="animated fadeIn admin view">
-                <App.AdminLogin />
-            </main>
+            return (
+                <main className="animated fadeIn admin view">
+                    <App.AdminLogin />
+                </main>
+            )
         }
     }
 });

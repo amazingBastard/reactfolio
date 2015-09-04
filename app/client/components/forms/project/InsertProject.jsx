@@ -73,7 +73,7 @@ App.InsertProject = React.createClass({
                     <App.FormInput hasError={!!this.state.errors.content} label="icon" icon="fa fa-pencil"
                                    name="Content" type="textarea" placeholder="Write about your project"/>
                     <button type="submit" className="primary fluid insert button"><i
-                        className="fa fa-download"></i></button>
+                        className="fa fa-floppy-o"></i></button>
                 </form>
             </div>
         )

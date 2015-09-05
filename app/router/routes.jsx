@@ -27,7 +27,7 @@ FlowRouter.route('/admin/new', {
 
 FlowRouter.route('/admin/:_id', {
     name: 'ProjectEdit',
-    action() {
+    action: function(params) {
         ReactLayout.render(App.Layout, {
             content: <App.ProjectEdit _id={params._id} />
         });

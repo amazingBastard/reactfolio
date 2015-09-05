@@ -17,19 +17,19 @@ FlowRouter.route('/admin', {
 });
 
 FlowRouter.route('/admin/new', {
-    name: 'ProjectNew',
+    name: 'ProjectInsert',
     action() {
         ReactLayout.render(App.Layout, {
-            content: <App.ProjectNew />
+            content: <App.ProjectInsert />
         });
     }
 });
 
 FlowRouter.route('/admin/:_id', {
-    name: 'ProjectEdit',
+    name: 'ProjectUpdate',
     action: function(params) {
         ReactLayout.render(App.Layout, {
-            content: <App.ProjectEdit _id={params._id} />
+            content: <App.ProjectUpdate _id={params._id} />
         });
     }
 });

@@ -22,7 +22,7 @@ App.Admin = React.createClass({
 
     renderProjects() {
         return this.data.projects.map(function (project) {
-            var path = FlowRouter.path('ProjectEdit', {_id: project._id});
+            var path = FlowRouter.path('ProjectUpdate', {_id: project._id});
             return (
                 <li className="project" key={project._id}>
                     <a className="path" href={path}>

@@ -1,4 +1,4 @@
-App.ProjectEdit = React.createClass({
+App.ProjectInsert = React.createClass({
     mixins: [ReactMeteorData],
     PropTypes: {},
     getInitialState() {
@@ -7,14 +7,9 @@ App.ProjectEdit = React.createClass({
         }
     },
     getMeteorData() {
-        var data = {},
-            handle = Meteor.subscribe('project', this.props._id);
-
-        if (handle.ready()) {
-            data.project = Projects.findOne({_id: this.props._id});
-        }
-
-        return data;
+        return {
+            currentUser: Meteor.user()
+        };
     },
     onSubmit(event) {
         event.preventDefault();
@@ -64,22 +59,22 @@ App.ProjectEdit = React.createClass({
         });
 
     },
-    renderUpdateProject() {
+    renderProjectInsert() {
         return (
-            <div className="update form module">
-                <h1 className="title"><i className="fa fa-terminal"></i>Edit Project</h1>
+            <div className="insert form module">
+                <h1 className="title"><i className="fa fa-terminal"></i>New Project</h1>
 
-                <form className="update form" onSubmit={this.onSubmit}>
+                <form className="insert form" onSubmit={this.onSubmit}>
                     <App.AuthErrors errors={this.state.errors}/>
                     <App.FormInput hasError={!!this.state.errors.title} label="icon" icon="fa fa-book" name="Title"
-                                   type="text" placeholder="project title" value={this.data.project.title}/>
+                                   type="text" placeholder="project title"/>
                     <App.FormInput hasError={!!this.state.errors.image} label="icon" icon="fa fa-picture-o" name="Image"
-                                   type="text" placeholder="image url" value={this.data.project.image}/>
+                                   type="text" placeholder="image url"/>
                     <App.FormInput hasError={!!this.state.errors.description} label="icon" icon="fa fa-pencil"
-                                   name="Description" type="textarea" placeholder="Project description" value={this.data.project.description}/>
+                                   name="Description" type="textarea" placeholder="Project description"/>
                     <App.FormInput hasError={!!this.state.errors.content} label="icon" icon="fa fa-pencil"
-                                   name="Content" type="textarea" placeholder="Write about your project" value={this.data.project.content}/>
-                    <button type="submit" className="primary fluid update button"><i
+                                   name="Content" type="textarea" placeholder="Write about your project"/>
+                    <button type="submit" className="primary fluid insert button"><i
                         className="fa fa-floppy-o"></i></button>
                 </form>
             </div>
@@ -87,8 +82,8 @@ App.ProjectEdit = React.createClass({
     },
     render() {
         return (
-            <main className="animated fadeIn admin edit project view">
-                {(this.data.project) ? this.renderUpdateProject() : <App.Loading />}
+            <main className="animated fadeIn admin new project view">
+                {(this.data.currentUser) ? this.renderProjectInsert() : <App.AdminLogin />}
             </main>
         )
     }

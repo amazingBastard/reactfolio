@@ -12,7 +12,8 @@ App.ProjectUpdate = React.createClass({
 
         if (handle.ready()) {
             data.project = Projects.findOne({_id: this.props._id});
-            data.currentUser = Meteor.user()
+            data.currentUser = Meteor.user(),
+            data.projectId = data.project._id;
         }
 
         return data;
@@ -25,13 +26,7 @@ App.ProjectUpdate = React.createClass({
             image = $(event.target).find('[name=image]').val(),
             description = $(event.target).find('[name=description]').val(),
             content = $(event.target).find('[name=content]').val(),
-            errors = {},
-            projectProps = {
-                title: title,
-                image: image,
-                description: description,
-                content: content
-            };
+            errors = {};
 
         if (!title) {
             errors.title = 'Title is required'
@@ -57,7 +52,7 @@ App.ProjectUpdate = React.createClass({
             return;
         }
 
-        Projects.update(this.data.project._id, {$set: projectProps}, (err) => {
+        Meteor.call('updateProject', this.data.projectId, title, image, description, content), (err) => {
             if (err) {
                 self.setState({
                     errors: {'none': err.reason}
@@ -67,7 +62,7 @@ App.ProjectUpdate = React.createClass({
             } else {
                 FlowRouter.go('Root');
             }
-        });
+        };
     },
     renderProjectUpdate() {
         return (

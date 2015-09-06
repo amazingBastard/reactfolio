@@ -81,10 +81,18 @@ App.ProjectInsert = React.createClass({
         )
     },
     render() {
-        return (
-            <main className="animated fadeIn admin new project view">
-                {(this.data.currentUser) ? this.renderProjectInsert() : <App.AdminLogin />}
-            </main>
-        )
+        if (this.data.currentUser) {
+            return (
+                <main className="animated fadeIn admin new project view">
+                    {this.renderProjectInsert()}
+                </main>
+            )
+        } else {
+            return (
+                <main className="animated fadeIn admin view">
+                    <App.AdminLogin />
+                </main>
+            )
+        }
     }
 });

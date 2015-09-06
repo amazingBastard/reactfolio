@@ -89,7 +89,7 @@ App.ProjectUpdate = React.createClass({
         if (this.data.currentUser) {
             return (
                 <main className="animated fadeIn admin edit project view">
-                    {(this.data.project) ? this.renderProjectUpdate() : <App.AdminLogin />}
+                    {(this.data.project) ? this.renderProjectUpdate() : <App.Loading />}
                 </main>
             )
         } else {

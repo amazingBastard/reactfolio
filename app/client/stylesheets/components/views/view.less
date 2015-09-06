@@ -9,6 +9,21 @@
   padding: @space-base;
   z-index: 1;
 
+  @media (min-width: @desktop-width) {
+    margin-right: @sixteenth;
+    margin-left: @sixteenth;
+  }
+
+  @media (min-width: @huge-desktop-width) {
+    margin-right: @eighth;
+    margin-left: @eighth;
+  }
+
+  @media (min-width: @giant-desktop-width) {
+    margin-right: @eighth + @sixteenth;
+    margin-left: @eighth + @sixteenth;
+  }
+
   .title {
     margin-bottom: @space-mini;
     text-transform: uppercase;

@@ -6,7 +6,7 @@ Projects.allow({
 });
 
 Projects.deny({
-    update: function(userId, post, fieldNames) {
+    update: function(userId, project, fieldNames) {
         // may only edit the following fields:
         return (_.without(fieldNames, 'title', 'image', 'description', 'content').length > 0);
     }

@@ -9,9 +9,9 @@ FlowRouter.route('/', {
 
 FlowRouter.route('/admin', {
     name: 'Admin',
-    action() {
+    action(params) {
         ReactLayout.render(App.Layout, {
-            content: <App.Admin />
+            content: <App.Admin _id={params._id} />
         });
     }
 });

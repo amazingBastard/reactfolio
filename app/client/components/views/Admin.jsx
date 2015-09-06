@@ -9,17 +9,13 @@ App.Admin = React.createClass({
         if (handle.ready()) {
             data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
             data.currentUser = Meteor.user();
-            //data.projectId = Projects.findOne({_id: this.props._id})._id;
         }
 
         return data;
     },
 
-    removeThisProject(event) {
-        event.preventDefault();
-
-        console.log('delete this project');
-        //Meteor.call('removeProject', data.projectId);
+    removeThisProject() {
+        Meteor.call('removeProject', this.props.project._id);
     },
 
     renderProjects() {

@@ -13,6 +13,7 @@ App.ProjectUpdate = React.createClass({
         if (handle.ready()) {
             data.project = Projects.findOne({_id: this.props._id});
             data.currentUser = Meteor.user();
+            data.userLoading = Meteor.loggingIn();
             data.projectId = data.project._id;
         }
 
@@ -86,6 +87,9 @@ App.ProjectUpdate = React.createClass({
         )
     },
     render() {
+        if (this.data.userLoading) {
+            return <App.Loading />
+        }
         if (this.data.currentUser) {
             return (
                 <main className="animated fadeIn admin edit project view">

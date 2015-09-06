@@ -8,7 +8,8 @@ App.ProjectInsert = React.createClass({
     },
     getMeteorData() {
         return {
-            currentUser: Meteor.user()
+            currentUser: Meteor.user(),
+            userLoading: Meteor.loggingIn()
         };
     },
     onSubmit(event) {
@@ -81,6 +82,9 @@ App.ProjectInsert = React.createClass({
         )
     },
     render() {
+        if (this.data.userLoading) {
+            return <App.Loading />
+        }
         if (this.data.currentUser) {
             return (
                 <main className="animated fadeIn admin new project view">

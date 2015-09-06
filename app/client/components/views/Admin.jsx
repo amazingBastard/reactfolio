@@ -9,6 +9,7 @@ App.Admin = React.createClass({
         if (handle.ready()) {
             data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
             data.currentUser = Meteor.user();
+            data.userLoading = Meteor.loggingIn();
         }
 
         return data;
@@ -34,6 +35,9 @@ App.Admin = React.createClass({
     },
 
     render() {
+        if (this.data.userLoading) {
+            return <App.Loading />
+        }
         if (this.data.currentUser) {
             return (
                 <main className="animated fadeIn admin view">

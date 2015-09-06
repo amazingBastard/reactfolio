@@ -25,7 +25,13 @@ App.ProjectUpdate = React.createClass({
             image = $(event.target).find('[name=image]').val(),
             description = $(event.target).find('[name=description]').val(),
             content = $(event.target).find('[name=content]').val(),
-            errors = {};
+            errors = {},
+            projectProps = {
+                title: title,
+                image: image,
+                description: description,
+                content: content
+            };
 
         if (!title) {
             errors.title = 'Title is required'
@@ -51,7 +57,7 @@ App.ProjectUpdate = React.createClass({
             return;
         }
 
-        Meteor.call('insertProject', title, image, description, content, (err) => {
+        Projects.update(this.data.project._id, {$set: projectProps}, (err) => {
             if (err) {
                 self.setState({
                     errors: {'none': err.reason}
@@ -59,11 +65,9 @@ App.ProjectUpdate = React.createClass({
 
                 return;
             } else {
-                // Reset form
-                document.querySelector('form').reset();
+                FlowRouter.go('Root');
             }
         });
-
     },
     renderProjectUpdate() {
         return (

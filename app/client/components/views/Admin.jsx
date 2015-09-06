@@ -1,5 +1,6 @@
 App.Admin = React.createClass({
     mixins: [ReactMeteorData],
+    PropTypes: {},
     getMeteorData() {
         var data = {},
             selector = {username: 'admin'},
@@ -8,6 +9,7 @@ App.Admin = React.createClass({
         if (handle.ready()) {
             data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
             data.currentUser = Meteor.user();
+            //data.projectId = Projects.findOne({_id: this.props._id})._id;
         }
 
         return data;
@@ -17,7 +19,7 @@ App.Admin = React.createClass({
         event.preventDefault();
 
         console.log('delete this project');
-        Meteor.call('removeProject', {projectId: project._id});
+        //Meteor.call('removeProject', data.projectId);
     },
 
     renderProjects() {

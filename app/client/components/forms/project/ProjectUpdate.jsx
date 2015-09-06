@@ -12,7 +12,7 @@ App.ProjectUpdate = React.createClass({
 
         if (handle.ready()) {
             data.project = Projects.findOne({_id: this.props._id});
-            data.currentUser = Meteor.user(),
+            data.currentUser = Meteor.user();
             data.projectId = data.project._id;
         }
 

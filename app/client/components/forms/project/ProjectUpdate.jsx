@@ -52,7 +52,7 @@ App.ProjectUpdate = React.createClass({
             return;
         }
 
-        Meteor.call('updateProject', this.data.projectId, title, image, description, content), (err) => {
+        Meteor.call('updateProject', this.data.projectId, title, image, description, content, (err) => {
             if (err) {
                 self.setState({
                     errors: {'none': err.reason}
@@ -60,9 +60,9 @@ App.ProjectUpdate = React.createClass({
 
                 return;
             } else {
-                FlowRouter.go('Root');
+                FlowRouter.go('Admin');
             }
-        };
+        });
     },
     renderProjectUpdate() {
         return (

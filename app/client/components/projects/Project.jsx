@@ -13,12 +13,13 @@ App.Project = React.createClass({
 
     render() {
         let title = this.props.project.title,
+            date = this.props.project.created,
             content = this.props.project.content;
 
         return (
             <module className="project module">
                 <h1 className="title">{title}
-                    <small className="date">date</small>
+                    <small className="date">{date}</small>
                 </h1>
                 <App.Markdown content={content}/>
             </module>

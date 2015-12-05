@@ -11,8 +11,8 @@ App.Projects = React.createClass({
         return (
             <module className="projects module">
                 <ul className="unstyled projects list">
-                    {this.props.games.map((game, index) => {
-                        return <App.GameItem key={index} game={game} />;
+                    {this.props.projects.map((project, index) => {
+                        return <App.Project key={index} project={project} />;
                     })}
                 </ul>
             </module>

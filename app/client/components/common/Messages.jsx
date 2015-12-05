@@ -13,7 +13,7 @@ App.Messages = React.createClass({
     render() {
         let module = this.props.childProps.module,
             message = this.props.childProps.message,
-            className = this.props.childProps.class;
+            className = this.props.childProps.type;
 
         return (
             <module className={module}>

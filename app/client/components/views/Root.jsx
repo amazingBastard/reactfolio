@@ -1,36 +1,48 @@
 App.Root = React.createClass({
     mixins: [ReactMeteorData],
+
     getMeteorData() {
-        var data = {},
-            selector = {username: 'admin'},
-            handle = Meteor.subscribe('projects', selector);
+        let selector = {author: 'admin'},
+            subscription = Meteor.subscribe('projects', selector);
 
-        if (handle.ready()) {
-            data.projects = Projects.find({}, {sort: {createdAt: -1}}).fetch();
-        }
-
-        return data;
+        return {
+            isLoading: !subscription.ready(),
+            projects: Projects.find({}, {limit: 1, sort: {created: -1}}).fetch()
+        };
     },
 
-    renderProjects() {
-        return this.data.projects.map(function (project) {
-            var path = FlowRouter.path('Project', {_id: project._id});
-            return <a className="project" key={project._id} href={path}>
-                       <h1 className="title">{project.title}</h1>
-                       <img className="image" src={project.image}/>
-                       <p className="description">{project.description}</p>
-                    </a>;
-
-        });
+    shouldComponentUpdate() {
+        return true;
     },
+
+    // @TODO: get the latest project from projects array
+    //renderLatestProject() {
+    //    let projects = this.data.projects,
+    //        project = {};
+    //
+    //    return (
+    //        <App.Project project={project}/>
+    //    );
+    //},
 
     render() {
-        return (
-            <main className="animated fadeIn root view">
-                <div className="projects module">
-                    {(this.data.projects) ? this.renderProjects() : <App.Loading />}
-                </div>
-            </main>
-        )
+        let noProjects = this.data.projects.length === 0,
+            project = this.data.projects,
+            messageProps = {
+                module: 'messages module',
+                type: 'centered message',
+                message: 'There are no projects'
+            };
+
+        if (this.data.isLoading) {
+            return <App.Loading />;
+        } else {
+            return (
+                <main className="animated fadeIn root view">
+                    {noProjects ? <App.Messages childProps={messageProps} /> :
+                        <App.Project project={project}/>}
+                </main>
+            );
+        }
     }
 });

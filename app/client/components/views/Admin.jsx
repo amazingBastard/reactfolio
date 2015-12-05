@@ -15,8 +15,9 @@ App.Admin = React.createClass({
     render() {
         let noProjects = this.data.projects.length === 0,
             messageProps = {
-                message: 'There are no projects',
-                class: 'centered'
+                module: 'messages module',
+                type: 'centered message',
+                message: 'There are no projects'
             };
 
         if (this.data.isLoading) {
@@ -24,7 +25,7 @@ App.Admin = React.createClass({
         } else {
             return (
                 <main className="animated fadeIn admin view">
-                    {noProjects ? <App.Messages messageProps={messageProps} /> :
+                    {noProjects ? <App.Messages childProps={messageProps} /> :
                         <App.Projects projects={this.data.projects}/>}
                     <a className="fluid primary new project button" href="/admin/new">New Project</a>
                 </main>

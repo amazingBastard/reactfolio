@@ -11,6 +11,7 @@ App.Layout = React.createClass({
                 </main>
 
                 <footer className="footer">
+                    <App.Toolbar />
                     <App.Copyright />
                 </footer>
             </layout>

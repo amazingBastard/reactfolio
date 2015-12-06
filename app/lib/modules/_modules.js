@@ -1,2 +1,4 @@
+App = {};
+
 Modules = {};
 Modules.lib = {};

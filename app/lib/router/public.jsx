@@ -25,8 +25,8 @@ publicRoutes.route('/portfolio', {
     }
 });
 
-publicRoutes.route('/account', {
-    name: 'account',
+publicRoutes.route('/login', {
+    name: 'login',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Login />});
         GAnalytics.pageview();

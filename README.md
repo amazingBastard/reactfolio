@@ -61,28 +61,44 @@ Have a look at the repository for more information.
 ### Packages Used
 
 * Meteor Core
-  * [meteor-platform](http://github.com/meteor/meteor/tree/devel/packages/meteor-platform)
+  * [meteor-base](http://github.com/meteor/meteor/tree/devel/packages/meteor-base)
+  * [mobile-experience](https://github.com/meteor/meteor/tree/devel/packages/mobile-experience)
+  * [mongo](https://github.com/meteor/meteor/tree/devel/packages/mongo)
+  * [blaze-html-templates](https://github.com/meteor/meteor/tree/devel/packages/blaze-html-templates)
+  * [session](https://github.com/meteor/meteor/tree/devel/packages/session)
+  * [jquery](https://github.com/meteor/meteor/tree/devel/packages/jquery)
+  * [tracker](https://github.com/meteor/meteor/tree/devel/packages/tracker)
+  * [standard-minifiers](https://github.com/meteor/meteor/tree/devel/packages/standard-minifiers)
+  * [es5-shim](https://github.com/meteor/meteor/tree/devel/packages/es5-shim)
+  * [ecmascript](https://github.com/meteor/meteor/tree/devel/packages/ecmascript)
 * Accounts
+  * [accounts-base](https://github.com/meteor/meteor/tree/devel/packages/accounts-base)
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
-* Routing
-  * [kadira:flow-router-ssr](https://github.com/kadirahq/flow-router/tree/ssr)
+* Collections
+  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
+  * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
+* Router
+  * [kadira:flow-router](https://github.com/kadirahq/flow-router)
   * [kadira:react-layout](https://github.com/kadirahq/meteor-react-layout)
   * [meteorhacks:fast-render](https://github.com/meteorhacks/fast-render)
 * SEO
   * [spiderable](http://github.com/meteor/meteor/tree/devel/packages/spiderable)
   * [tomwasd:flow-router-seo](https://github.com/tomwasd/flow-router-seo)
-* UI and UX
-  * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
-  * [natestrauser:animate-css](http://github.com/nate-strauser/meteor-animate-css)
+* Analytics 
+  * [datariot:ganalytics](https://github.com/datariot/meteor-ganalytics)
+* UI/UX
+  * [natestrauser:animate-css](https://github.com/nate-strauser/meteor-animate-css)
   * [fortawesome:fontawesome](https://github.com/MeteorPackaging/Font-Awesome)
 * Development
-  * [http](http://github.com/meteor/meteor/tree/devel/packages/http)
-  * [underscore](http://github.com/meteor/meteor/tree/devel/packages/underscore)
-  * [check](http://github.com/meteor/meteor/tree/devel/packages/check)
-  * [react](http://github.com/meteor/meteor/tree/devel/packages/react)
-  * [flemay:less-autoprefixer](https://github.com/flemay/less-autoprefixer)
-  * [momentjs:moment](http://github.com/moment/moment/)
-  * [msavin:mongol](http://github.com/msavin/Mongol)
+  * [check](https://github.com/meteor/meteor/tree/devel/packages/check)
+  * [react](https://github.com/meteor/meteor/tree/devel/packages/react)
+  * [fastclick](http://github.com/meteor/meteor/tree/devel/packages/fastclick)
+  * [reactive-var](https://github.com/meteor/meteor/tree/devel/packages/reactive-var)
+  * [reactive-dict](https://github.com/meteor/meteor/tree/devel/packages/reactive-dict)
+  * [fourseven:scss](https://github.com/fourseven/meteor-scss)
+  * [wolves:bourbon](https://github.com/wolvesio/meteor-bourbon)
+  * [stevezhu:lodash](https://github.com/stevezhu/meteor-lodash)
+  * [momentjs:moment](https://github.com/moment/moment/)
 
 The "insecure" and "autopublish" packages are removed by default (they make your app vulnerable).
 

@@ -57,5 +57,6 @@ fastclick
 reactive-var
 reactive-dict
 fourseven:scss
+wolves:bourbon
 stevezhu:lodash
 momentjs:moment

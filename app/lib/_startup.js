@@ -1,1 +1,1 @@
-Meteor.startup( () => Modules.lib.startup() );
+Meteor.startup(() => Modules.lib.startup());

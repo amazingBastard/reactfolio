@@ -38,10 +38,10 @@ App.Root = React.createClass({
             return <App.Loading />;
         } else {
             return (
-                <main className="animated fadeIn root view">
+                <view className="animated fadeIn root view">
                     {noProjects ? <App.Messages messageProps={messageProps} /> :
                         <App.Project project={project}/>}
-                </main>
+                </view>
             );
         }
     }

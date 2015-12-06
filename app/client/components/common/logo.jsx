@@ -1,4 +1,4 @@
-App.Header = React.createClass({
+App.Logo = React.createClass({
     mixins: [ReactMeteorData],
     getMeteorData() {
         return {
@@ -29,10 +29,10 @@ App.Header = React.createClass({
         }
 
         return (
-            <header className="animated fadeInDown header">
+            <module className="animated fadeInDown logo module">
                 <h1 className="title"><a className="route" href="/"><span className="brand font">React</span>folio</a></h1>
                 {buttons}
-            </header>
+            </module>
         )
     }
 });

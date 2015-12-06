@@ -9,13 +9,13 @@ App.Projects = React.createClass({
 
     render() {
         return (
-            <module className="projects module">
+            <view className="adnimated fadeIn projects view">
                 <ul className="unstyled projects list">
                     {this.props.projects.map((project, index) => {
                         return <App.Project key={index} project={project} />;
                     })}
                 </ul>
-            </module>
+            </view>
         );
     }
 });

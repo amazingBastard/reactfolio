@@ -1,6 +1,6 @@
 const privateRedirect = () => {
     if (!Meteor.loggingIn() && !Meteor.userId()) {
-        FlowRouter.go('login');
+        FlowRouter.go('account');
     }
 };
 

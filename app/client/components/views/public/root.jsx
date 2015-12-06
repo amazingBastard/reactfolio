@@ -7,7 +7,7 @@ App.Root = React.createClass({
 
         return {
             isLoading: !subscription.ready(),
-            project: Projects.findOne({}, {sort: {created: -1}}).fetch()
+            project: Projects.findOne({}, {sort: {created: -1}})
         };
     },
 
@@ -16,8 +16,7 @@ App.Root = React.createClass({
     },
 
     render() {
-        let noProjects = this.data.project.length === 0,
-            project = this.data.project,
+        let project = this.data.project,
             messageProps = {
                 module: 'messages module',
                 type: 'centered message',
@@ -29,7 +28,7 @@ App.Root = React.createClass({
         } else {
             return (
                 <view className="animated fadeIn root view">
-                    {noProjects ? <App.Messages messageProps={messageProps} /> :
+                    {!project ? <App.Messages messageProps={messageProps} /> :
                         <App.Project project={project}/>}
                 </view>
             );

@@ -7,23 +7,35 @@ App.Project = React.createClass({
         return true;
     },
 
-    // @TODO: render different markup for different routes
-    // /projects shows a list item
-    // / shows a single project module
-
-    render() {
+    // @TODO: create router helper that checks current route
+    renderProject() {
         let title = this.props.project.title,
             author = this.props.project.author,
-            date = this.props.project.created,
-            content = this.props.project.content;
+            date = this.props.project.created;
 
-        return (
-            <module className="project module">
-                <h1 className="title">{title}
-                    <small className="meta">{author} - {date}</small>
-                </h1>
-                <App.Markdown content={content}/>
-            </module>
-        );
+        if (FlowRouter.current().route.name === 'root') {
+            let content = this.props.project.content;
+
+            return (
+                <module className="project module">
+                    <h1 className="title">{title}
+                        <small className="meta">{author} - {date}</small>
+                    </h1>
+                    <App.Markdown content={content}/>
+                </module>
+            )
+        } else {
+            return (
+                <li className="project item">
+                    <h1 className="title">{title}
+                        <small className="meta">{author} - {date}</small>
+                    </h1>
+                </li>
+            );
+        }
+    },
+
+    render() {
+        return this.renderProject();
     }
 });

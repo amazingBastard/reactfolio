@@ -1,6 +1,6 @@
 App.Messages = React.createClass({
     propTypes: {
-        childProps: React.PropTypes.object
+        messageProps: React.PropTypes.object
     },
     shouldComponentUpdate() {
         return true;
@@ -11,9 +11,9 @@ App.Messages = React.createClass({
     // different markup should be rendered for each condition
 
     render() {
-        let module = this.props.childProps.module,
-            message = this.props.childProps.message,
-            className = this.props.childProps.type;
+        let module = this.props.messageProps.module,
+            message = this.props.messageProps.message,
+            className = this.props.messageProps.type;
 
         return (
             <module className={module}>

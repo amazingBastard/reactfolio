@@ -15,7 +15,7 @@ App.Logo = React.createClass({
         if (currentUser) {
             buttons = (
                 <div className="buttons">
-                    <a className="admin icon button" href="/admin"><i className="fa fa-user"></i></a>
+                    <a className="admin icon button" href="/dashboard"><i className="fa fa-user"></i></a>
                     <button className="logout icon button" onClick={this.handleLogout}><i className="fa fa-sign-out"></i>
                     </button>
                 </div>
@@ -23,7 +23,7 @@ App.Logo = React.createClass({
         } else {
             buttons = (
                 <div className="buttons">
-                    <a className="login icon button" href="/admin"><i className="fa fa-sign-in"></i></a>
+                    <a className="login icon button" href="/login"><i className="fa fa-sign-in"></i></a>
                 </div>
             )
         }

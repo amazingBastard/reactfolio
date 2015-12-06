@@ -2,10 +2,20 @@ App.LoginForm = React.createClass({
     handleLogin(event) {
         event.preventDefault();
 
-        console.log('login');
+        let username = $('[name="username"]').val(),
+            password = $('[name="password"]').val();
+
+        Meteor.loginWithPassword(username, password, (error) => {
+            if (error) {
+                console.error(error.reason, 'warning');
+            } else {
+                console.log('Logged in!', 'success');
+            }
+        });
     },
     render() {
         return (
+            // @TODO: make component for input groups
             <form className="account login form" onSubmit={this.handleLogin}>
                 <div className="input group">
                     <label className="icon label" htmlFor="username"><i className="fa fa-user"></i></label>

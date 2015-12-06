@@ -2,12 +2,12 @@ App.Root = React.createClass({
     mixins: [ReactMeteorData],
 
     getMeteorData() {
-        let selector = {author: 'admin'},
+        let selector = {author: 'Damir Vazgird'},
             subscription = Meteor.subscribe('projects', selector);
 
         return {
             isLoading: !subscription.ready(),
-            projects: Projects.find({}, {limit: 1, sort: {created: -1}}).fetch()
+            project: Projects.findOne({}, {sort: {created: -1}}).fetch()
         };
     },
 
@@ -15,19 +15,9 @@ App.Root = React.createClass({
         return true;
     },
 
-    // @TODO: get the latest project from projects array
-    //renderLatestProject() {
-    //    let projects = this.data.projects,
-    //        project = {};
-    //
-    //    return (
-    //        <App.Project project={project}/>
-    //    );
-    //},
-
     render() {
-        let noProjects = this.data.projects.length === 0,
-            project = this.data.projects,
+        let noProjects = this.data.project.length === 0,
+            project = this.data.project,
             messageProps = {
                 module: 'messages module',
                 type: 'centered message',

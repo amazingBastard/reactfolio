@@ -25,6 +25,10 @@ let ProjectsSchema = new SimpleSchema({
         type: String,
         label: 'The content of the project in markdown format'
     },
+    'owner': {
+        type: String,
+        label: 'The user id of the owner of the project'
+    },
     'created': {
         type: Date,
         label: 'The date the project was created in the projects collection'

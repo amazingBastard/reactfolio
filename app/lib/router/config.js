@@ -1,8 +1,8 @@
-FlowRouter.notFound = {
-    action() {
-        ReactLayout.render(App.Layout, {view: <App.Redirect />});
-    }
-};
+//FlowRouter.notFound = {
+//    action() {
+//        ReactLayout.render(App.Layout, {view: <App.Redirect />});
+//    }
+//};
 
 Accounts.onLogin(() => {
     let currentRoute = FlowRouter.current();

@@ -17,10 +17,10 @@ publicRoutes.route('/', {
     }
 });
 
-publicRoutes.route('/projects', {
-    name: 'projects',
+publicRoutes.route('/portfolio', {
+    name: 'portfolio',
     action() {
-        ReactLayout.render(App.Layout, {view: <App.Projects />});
+        ReactLayout.render(App.Layout, {view: <App.Portfolio />});
         GAnalytics.pageview();
     }
 });

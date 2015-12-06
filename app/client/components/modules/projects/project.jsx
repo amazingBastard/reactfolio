@@ -8,7 +8,7 @@ App.Project = React.createClass({
     },
 
     // @TODO: create router helper that checks current route
-    renderProject() {
+    render() {
         let title = this.props.project.title,
             author = this.props.project.author,
             date = this.props.project.created;
@@ -33,9 +33,5 @@ App.Project = React.createClass({
                 </li>
             );
         }
-    },
-
-    render() {
-        return this.renderProject();
     }
 });

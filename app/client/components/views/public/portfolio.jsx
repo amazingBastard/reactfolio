@@ -27,7 +27,7 @@ App.Portfolio = React.createClass({
             return <App.Loading />;
         } else {
             return (
-                <view className="animated fadeIn root view">
+                <view className="animated fadeIn portfolio view">
                     {!projects ? <App.Messages messageProps={messageProps} /> :
                         <App.Projects projects={projects}/>}
                 </view>

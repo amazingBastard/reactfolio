@@ -26,11 +26,11 @@ App.Project = React.createClass({
             )
         } else {
             return (
-                <li className="project item">
+                <figure className="project figure">
                     <h1 className="title">{title}
                         <small className="meta">{author} - {date}</small>
                     </h1>
-                </li>
+                </figure>
             );
         }
     }

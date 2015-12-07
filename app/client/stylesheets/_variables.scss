@@ -1,3 +1,5 @@
+@import "{wolves:bourbon}/bourbon";
+
 // Monochrome Colors
 
 $dark:         #000;
@@ -39,26 +41,24 @@ $slow: 1000ms;
 $slower: 2000ms;
 $slowest: 3000ms;
 
-// Space Variables
+// Sizes
 
-$space-quantum: 0.05em;
-$space-atomic: 0.10em;
-$space-micro: 0.15em;
-$space-mini: 0.25em;
-$space-tiny: 0.5em;
-$space-small: 0.75em;
-$space-base: 1em;
-$space-large: 2em;
-$space-huge: 3em;
-$space-jumbo: 4em;
-$space-massive: 5em;
-$space-giant: 6em;
-$space-colossal: 7em;
-$space-titanic: 8em;
-$space-galactic: 9em;
-$space-god: 10em;
-
-// Size Variables
+$quantum: 0.05em;
+$atomic: 0.10em;
+$micro: 0.15em;
+$mini: 0.25em;
+$tiny: 0.5em;
+$small: 0.75em;
+$base: 1em;
+$large: 2em;
+$huge: 3em;
+$jumbo: 4em;
+$massive: 5em;
+$giant: 6em;
+$colossal: 7em;
+$titanic: 8em;
+$galactic: 9em;
+$god: 10em;
 
 $fluid-sixteenth: 6vh;
 $fluid-eighth: 12.5vh;
@@ -77,6 +77,11 @@ $half: 50%;
 $two-thirds: 66.6666%;
 $three-quarters: 75%;
 $full: 100%;
+
+// Modular Scale
+
+$modular-scale-ratio: $golden;
+$modular-scale-base: 1rem;
 
 // Media Queries
 

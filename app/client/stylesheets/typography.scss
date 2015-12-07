@@ -3,9 +3,16 @@
 html {
 
   body {
+    color: $font-color;
+    font-size: modular-scale(1);
+
 
     p, a, li, td, blockquote, article, figure, pre, code {
-
+      position: relative;
+      margin: 0;
+      margin-bottom: $base;
+      color: $font-color;
+      font-size: modular-scale(1);
     }
   }
 }

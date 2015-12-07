@@ -4,42 +4,29 @@ App.Toolbar = React.createClass({
     },
 
     renderAdminButton() {
-        let user = Meteor.user();
-
-        if (AccountHelpers.isAdmin(user.username)) {
-            return (
-                <a href="left icon button" href={RouterHelpers.pathFor('dashboard')}>
-                    <i className="fa fa-user"></i>
-                </a>
-            );
-        }
-    },
-
-    renderButtons() {
         if (!Meteor.loggingIn() && Meteor.user()) {
-            return (
-                <module className="actions module">
-                    {this.renderAdminButton()}
-                    <a href="right icon button" href={RouterHelpers.pathFor('portfolio')}>
-                        <i className="fa fa-camera"></i>
-                    </a>
-                </module>
+            let buttonProps = {
+                type: 'left icon button',
+                route: 'dashboard',
+                icon: 'fa fa-user'
+            };
 
-            );
-        } else {
             return (
-                <module className="actions module">
-                    <a href="right icon button" href={RouterHelpers.pathFor('portfolio')}>
-                        <i className="fa fa-camera"></i>
-                    </a>
-                </module>
+                <App.Button buttonProps={buttonProps} />
             );
         }
     },
     render() {
+        let buttonProps = {
+            type: 'right icon button',
+            route: 'portfolio',
+            icon: 'fa fa-camera'
+        };
+
         return (
             <module className="toolbar module">
-                {this.renderButtons()}
+                {this.renderAdminButton()}
+                <App.Button buttonProps={buttonProps} />
             </module>
         );
     }

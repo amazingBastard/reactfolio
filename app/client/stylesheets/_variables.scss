@@ -80,7 +80,7 @@ $full: 100%;
 
 // Modular Scale
 
-$modular-scale-ratio: $golden;
+$modular-scale-ratio: 1.2;
 $modular-scale-base: 1rem;
 
 // Media Queries
@@ -92,4 +92,6 @@ $desktop-width: 75em;
 $large-desktop-width: 100em;
 $huge-desktop-width: 125em;
 $jumbo-desktop-width: 175em;
-$giant-desktop-width: 200em;
+$massive-desktop-width: 200em;
+$giant-desktop-width: 250em;
+$colossal-desktop-width: 300em;

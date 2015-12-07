@@ -32,3 +32,10 @@ publicRoutes.route('/login', {
         GAnalytics.pageview();
     }
 });
+
+FlowRouter.notFound = {
+    action() {
+        ReactLayout.render(App.Layout, {view: <App.Redirect />});
+        GAnalytics.pageview();
+    }
+};

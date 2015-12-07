@@ -12,9 +12,3 @@ if (Meteor.isClient) {
         }
     });
 }
-// @TODO: fix syntax error when calling redirect into view
-//FlowRouter.notFound = {
-//    action() {
-//        ReactLayout.render(App.Layout, {view: <App.Redirect />});
-//    }
-//};

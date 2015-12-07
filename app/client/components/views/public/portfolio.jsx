@@ -29,7 +29,7 @@ App.Portfolio = React.createClass({
         } else {
             return (
                 <view className="animated fadeIn portfolio view">
-                    {noProjects ? <App.Messages messageProps={messageProps}/> :
+                    {noProjects ? <App.Message messageProps={messageProps}/> :
                         <App.Projects projects={projects}/>}
                 </view>
             );

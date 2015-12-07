@@ -3,16 +3,17 @@
 html {
 
   body {
-    color: $font-color;
-    font-size: modular-scale(1);
-
+    margin: 0;
 
     p, a, li, td, blockquote, article, figure, pre, code {
-      position: relative;
       margin: 0;
-      margin-bottom: $base;
       color: $font-color;
       font-size: modular-scale(1);
+    }
+
+    h1, h2, h3, h4, h5, h6, .title {
+      margin: 0;
+      color: $header-color;
     }
   }
 }

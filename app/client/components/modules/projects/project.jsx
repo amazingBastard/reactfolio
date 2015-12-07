@@ -7,7 +7,6 @@ App.Project = React.createClass({
         return true;
     },
 
-    // @TODO: create router helper that checks current route
     render() {
         let title = this.props.project.title,
             author = this.props.project.author,

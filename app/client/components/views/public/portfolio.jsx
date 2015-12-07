@@ -17,6 +17,7 @@ App.Portfolio = React.createClass({
 
     render() {
         let projects = this.data.projects,
+            noProjects = projects.length === 0,
             messageProps = {
                 module: 'messages module',
                 type: 'centered message',
@@ -28,7 +29,7 @@ App.Portfolio = React.createClass({
         } else {
             return (
                 <view className="animated fadeIn portfolio view">
-                    {!projects ? <App.Messages messageProps={messageProps} /> :
+                    {noProjects ? <App.Messages messageProps={messageProps}/> :
                         <App.Projects projects={projects}/>}
                 </view>
             );

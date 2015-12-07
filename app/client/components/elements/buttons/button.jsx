@@ -12,14 +12,26 @@ App.Button = React.createClass({
     // different markup should be rendered for each condition
 
     render() {
-        let path = RouterHelpers.pathFor(this.props.buttonProps.route),
-            type = this.props.buttonProps.type,
-            icon = this.props.buttonProps.icon;
+        let type = this.props.buttonProps.type;
 
-        return (
-            <a className={type} href={path}>
-                <i className={icon}></i>
-            </a>
-        );
+        if (this.props.buttonProps.route) {
+            let path = RouterHelpers.pathFor(this.props.buttonProps.route);
+
+            if (this.props.buttonProps.icon) {
+                let icon = this.props.buttonProps.icon;
+
+                return (
+                    <a className={type} href={path}>
+                        <i className={icon}></i>
+                    </a>
+                );
+            } else {
+                let label = this.props.buttonProps.label;
+
+                return (
+                    <a className={type} href={path}>{label}</a>
+                );
+            }
+        }
     }
 });

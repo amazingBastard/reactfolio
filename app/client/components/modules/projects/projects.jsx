@@ -1,6 +1,6 @@
 App.Projects = React.createClass({
     propTypes: {
-        projects: React.PropTypes.object
+        projects: React.PropTypes.array
     },
 
     shouldComponentUpdate() {

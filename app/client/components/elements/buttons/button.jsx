@@ -7,10 +7,6 @@ App.Button = React.createClass({
         return true;
     },
 
-    // @TODO: check for different button props to render different markup
-    // some buttons may have icons, classes, types, etc...
-    // different markup should be rendered for each condition
-
     render() {
         let type = this.props.buttonProps.type;
 
@@ -30,6 +26,22 @@ App.Button = React.createClass({
 
                 return (
                     <a className={type} href={path}>{label}</a>
+                );
+            }
+        } else {
+            if (this.props.buttonProps.icon) {
+                let icon = this.props.buttonProps.icon;
+
+                return (
+                    <button className={type}>
+                        <i className={icon}></i>
+                    </button>
+                );
+            } else {
+                let label = this.props.buttonProps.label;
+
+                return (
+                    <button className={type}>{label}</button>
                 );
             }
         }

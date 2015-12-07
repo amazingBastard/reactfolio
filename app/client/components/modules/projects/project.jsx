@@ -13,7 +13,7 @@ App.Project = React.createClass({
             author = this.props.project.author,
             date = this.props.project.created;
 
-        if (FlowRouter.current().route.name === 'root') {
+        if (RouterHelpers.currentRoute('root')) {
             let content = this.props.project.content;
 
             return (

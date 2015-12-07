@@ -26,7 +26,6 @@ accounts-password
 
 # Collections
 
-dburles:collection-helpers
 aldeed:collection2
 
 # Router

@@ -75,7 +75,6 @@ Have a look at the repository for more information.
   * [accounts-base](https://github.com/meteor/meteor/tree/devel/packages/accounts-base)
   * [accounts-password](https://github.com/meteor/meteor/tree/devel/packages/accounts-password)
 * Collections
-  * [dburles:collection-helpers](https://github.com/dburles/meteor-collection-helpers)
   * [aldeed:collection2](https://github.com/aldeed/meteor-collection2)
 * Router
   * [kadira:flow-router](https://github.com/kadirahq/flow-router)

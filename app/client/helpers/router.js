@@ -9,11 +9,17 @@ let urlFor = (path, params) => {
 
 let currentRoute = (route) => {
     FlowRouter.watchPathChange();
+    return FlowRouter.current().route.name === route;
+};
+
+let activeRoute = (route) => {
+    FlowRouter.watchPathChange();
     return FlowRouter.current().route.name === route ? 'active' : '';
 };
 
 RouterHelpers = {
     pathFor: pathFor,
     urlFor: urlFor,
-    currentRoute: currentRoute
+    currentRoute: currentRoute,
+    activeRoute: activeRoute
 };

@@ -1,0 +1,13 @@
+@import '../../_variables';
+
+.logo.module {
+  margin: $micro;
+  padding: $micro $mini 0;
+  border-radius: $micro;
+  background-color: $primary-color;
+
+  .logo {
+    color: $light;
+    text-decoration: none;
+  }
+}

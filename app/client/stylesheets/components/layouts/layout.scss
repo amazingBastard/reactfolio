@@ -18,11 +18,10 @@ html {
       overflow: hidden;
 
       .header {
+        display: inherit;
         position: fixed;
         top: 0;
         right: 0;
-        margin: 0;
-        padding: 0;
         z-index: 1;
       }
 
@@ -33,6 +32,7 @@ html {
 
       .footer {
         position: relative;
+        text-align: center;
       }
     }
   }

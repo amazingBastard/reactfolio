@@ -1,0 +1,55 @@
+@import '../_variables';
+
+
+.module {
+  display: block;
+  position: relative;
+
+  &.fixed {
+    position: fixed;
+    left: 0;
+
+    &.bottom {
+      bottom: 0;
+    }
+  }
+
+  &.logo {
+    margin: $micro;
+    padding: $micro $mini 0;
+    border-radius: $micro;
+    background-color: $primary-color;
+
+    .logo {
+      color: $light;
+      text-decoration: none;
+    }
+  }
+
+  &.toolbar {
+
+    .button {
+      position: fixed;
+      bottom: 0;
+      margin: $micro;
+      z-index: 1;
+
+      &.left {
+        left: 0;
+      }
+
+      &.right {
+        right: 0;
+      }
+    }
+  }
+
+  &.copyright {
+    text-align: center;
+
+    .copyright {
+      color: $gray;
+      font-size: $tiny;
+    }
+  }
+}

@@ -18,7 +18,7 @@ App.Root = React.createClass({
     render() {
         let project = this.data.project,
             messageProps = {
-                module: 'messages module',
+                module: 'message module',
                 type: 'centered message',
                 message: 'There are no projects'
             },

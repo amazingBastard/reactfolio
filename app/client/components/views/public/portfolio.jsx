@@ -19,7 +19,7 @@ App.Portfolio = React.createClass({
         let projects = this.data.projects,
             noProjects = projects.length === 0,
             messageProps = {
-                module: 'messages module',
+                module: 'message module',
                 type: 'centered message',
                 message: 'There are no projects'
             };

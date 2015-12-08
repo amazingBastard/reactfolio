@@ -1,4 +1,4 @@
-@import '../../_variables';
+@import '../_variables';
 
 html {
   width: $full;
@@ -32,7 +32,6 @@ html {
 
       .footer {
         position: relative;
-        text-align: center;
       }
     }
   }

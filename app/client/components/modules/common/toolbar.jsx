@@ -7,8 +7,8 @@ App.Toolbar = React.createClass({
         if (!Meteor.loggingIn() && Meteor.user()) {
             let buttonProps = {
                 type: 'left icon button',
-                route: 'dashboard',
-                icon: 'fa fa-user'
+                route: 'insert',
+                icon: 'fa fa-plus'
             };
 
             return (
@@ -16,6 +16,7 @@ App.Toolbar = React.createClass({
             );
         }
     },
+
     render() {
         let buttonProps = {
             type: 'right icon button',

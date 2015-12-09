@@ -83,6 +83,14 @@ $full: 100%;
 $modular-scale-ratio: 1.2;
 $modular-scale-base: $base;
 
+// Font Family
+
+$font-family-sans-serif: 'Roboto', Helvetica, Arial, sans-serif;
+$font-family-serif: Georgia, 'Times New Roman', Times, serif;
+$font-family-monospace: 'Roboto Mono', Menlo, Monaco, Consolas, monospace;
+$font-family-base: $font-family-monospace;
+$font-family-header: $font-family-sans-serif;
+
 // Media Queries
 
 $phone-width: 30em;

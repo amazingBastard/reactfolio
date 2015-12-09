@@ -21,12 +21,7 @@ App.Root = React.createClass({
                 module: 'message module',
                 type: 'centered message',
                 message: 'There are no projects'
-            },
-            buttonProps = {
-                type: 'bottom centered icon button',
-                route: 'insert',
-                icon: 'fa fa-plus'
-            };
+            }
 
         if (this.data.isLoading) {
             return <App.Loading />;
@@ -35,7 +30,6 @@ App.Root = React.createClass({
                 <view className="animated fadeIn root view">
                     {!project ? <App.Message messageProps={messageProps} /> :
                         <App.Project project={project}/>}
-                    <App.Button buttonProps={buttonProps} />
                 </view>
             );
         }

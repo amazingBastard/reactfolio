@@ -27,12 +27,16 @@
   }
 
   &.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
 
     .button {
       position: fixed;
       bottom: 0;
       margin: $micro;
-      z-index: 1;
+      font-size: $base + $tiny;
+      z-index: 5;
 
       &.left {
         left: 0;
@@ -45,11 +49,12 @@
   }
 
   &.copyright {
-    text-align: center;
+    padding: $micro;
 
     .copyright {
       color: $gray;
       font-size: $tiny;
+      text-align: center;
     }
   }
 }

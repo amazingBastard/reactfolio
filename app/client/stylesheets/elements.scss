@@ -10,16 +10,14 @@ html {
       margin: 0;
       padding: $tiny $base;
       outline: 0;
-      border: $micro solid $highlight-color;
-      border-radius: $micro;
-      background-color: $highlight-color;
+      border: 0;
+      background-color: transparent;
       color: $header-color;
       text-align: center;
       transition: all $faster;
 
       &:hover {
-        background-color: transparent;
-        color: $highlight-color;
+        color: $primary-color;
         text-decoration: none;
       }
 

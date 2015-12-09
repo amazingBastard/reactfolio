@@ -15,6 +15,26 @@ App.Root = React.createClass({
         return true;
     },
 
+    renderToolbar() {
+        let isUser = !Meteor.loggingIn() && Meteor.user(),
+            buttonProps = {
+                type: 'right icon button',
+                route: 'portfolio',
+                icon: 'fa fa-th'
+            }, adminButton = {
+                type: 'left icon button',
+                route: 'insert',
+                icon: 'fa fa-plus'
+            };
+
+        return (
+            <module className="toolbar module">
+                {(isUser) ? <App.Button buttonProps={adminButton}/> : ''}
+                <App.Button buttonProps={buttonProps}/>
+            </module>
+        );
+    },
+
     render() {
         let project = this.data.project,
             messageProps = {
@@ -28,8 +48,9 @@ App.Root = React.createClass({
         } else {
             return (
                 <view className="animated fadeIn root view">
-                    {!project ? <App.Message messageProps={messageProps} /> :
+                    {!project ? <App.Message messageProps={messageProps}/> :
                         <App.Project project={project}/>}
+                    {this.renderToolbar()}
                 </view>
             );
         }

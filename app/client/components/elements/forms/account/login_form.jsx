@@ -13,6 +13,7 @@ App.LoginForm = React.createClass({
             }
         });
     },
+
     render() {
         return (
             // @TODO: make component for input groups

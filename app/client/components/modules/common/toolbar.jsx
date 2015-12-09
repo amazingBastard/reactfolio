@@ -19,16 +19,29 @@ App.Toolbar = React.createClass({
 
     render() {
         let buttonProps = {
-            type: 'right icon button',
-            route: 'portfolio',
-            icon: 'fa fa-camera'
+            type: 'right icon button'
         };
 
-        return (
-            <module className="toolbar module">
-                {this.renderAdminButton()}
-                <App.Button buttonProps={buttonProps} />
-            </module>
-        );
+        if (RouterHelpers.currentRoute('root')) {
+            buttonProps.route = 'portfolio';
+            buttonProps.icon = 'fa fa-th';
+
+            return (
+                <module className="toolbar module">
+                    {this.renderAdminButton()}
+                    <App.Button buttonProps={buttonProps} />
+                </module>
+            );
+        } else {
+            buttonProps.route = 'root';
+            buttonProps.icon = 'fa fa-square';
+
+            return (
+                <module className="toolbar module">
+                    {this.renderAdminButton()}
+                    <App.Button buttonProps={buttonProps} />
+                </module>
+            );
+        }
     }
 });

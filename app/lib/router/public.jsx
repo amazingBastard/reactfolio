@@ -1,19 +1,16 @@
-const publicRedirect = () => {
-    if (Meteor.userId()) {
-        FlowRouter.go('root');
-    }
+const pageView = () => {
+    GAnalytics.pageview();
 };
 
 const publicRoutes = FlowRouter.group({
     name: 'public',
-    triggersEnter: [publicRedirect]
+    triggersEnter: [pageView]
 });
 
 publicRoutes.route('/', {
     name: 'root',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Root />});
-        GAnalytics.pageview();
     }
 });
 
@@ -21,7 +18,6 @@ publicRoutes.route('/portfolio', {
     name: 'portfolio',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Portfolio />});
-        GAnalytics.pageview();
     }
 });
 
@@ -29,13 +25,11 @@ publicRoutes.route('/login', {
     name: 'login',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Login />});
-        GAnalytics.pageview();
     }
 });
 
 FlowRouter.notFound = {
     action() {
         ReactLayout.render(App.Layout, {view: <App.Redirect />});
-        GAnalytics.pageview();
     }
 };

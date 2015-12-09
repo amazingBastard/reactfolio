@@ -4,16 +4,19 @@ const privateRedirect = () => {
     }
 };
 
+const pageView = () => {
+    GAnalytics.pageview();
+};
+
 const privateRoutes = FlowRouter.group({
     name: 'private',
-    triggersEnter: [privateRedirect]
+    triggersEnter: [privateRedirect, pageView]
 });
 
 privateRoutes.route('/insert', {
     name: 'insert',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Insert />});
-        GAnalytics.pageview();
     }
 });
 
@@ -21,6 +24,5 @@ privateRoutes.route('/dashboard', {
     name: 'dashboard',
     action() {
         ReactLayout.render(App.Layout, {view: <App.Dashboard />});
-        GAnalytics.pageview();
     }
 });

@@ -14,6 +14,22 @@
     }
   }
 
+  &.loading {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: $fluid-full;
+    width: $full;
+    align-items: center;
+    justify-content: center;
+
+    .loader.image {
+      width: $half;
+      margin: auto;
+    }
+  }
+
   &.logo {
     margin: $micro;
     padding: $micro $mini 0;

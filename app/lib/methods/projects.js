@@ -17,8 +17,8 @@ Meteor.methods({
         } else {
 
             let project = _.extend(projectKeys, {
-                author: user.username,
-                owner: user,
+                author: user.profile.name,
+                owner: user._id,
                 created: now
             }), projectId = Projects.insert(project);
 

@@ -6,12 +6,31 @@ App.Insert = React.createClass({
         console.log('toggle preview');
     },
 
-    handleSave(event) {
+    handleCreate(event) {
         event.preventDefault();
 
+        let projectKeys = {
+            title: $('[name="title"]').val(),
+            content: $('[name="content"]').val()
+        }, user = Meteor.user();
 
-
-        console.log('save project');
+        if (!user) {
+            console.log('You need to be logged in to create a project');
+        }
+        if (projectKeys.title === '') {
+            console.log('Your project needs a title');
+        }
+        if (projectKeys.content === '') {
+            console.log('You project needs content');
+        } else {
+            Meteor.call('createProject', projectKeys, (error) => {
+                if (error) {
+                    console.error(error.reason);
+                } else {
+                    FlowRouter.go('root');
+                }
+            });
+        }
     },
 
     renderToolbar() {
@@ -30,7 +49,7 @@ App.Insert = React.createClass({
         return (
             <module className="toolbar module">
                 <App.Button buttonProps={leftButton} handleEvent={this.togglePreview} />
-                <App.Button buttonProps={rightButton} handleEvent={this.handleSave} />
+                <App.Button buttonProps={rightButton} handleEvent={this.handleCreate} />
             </module>
         );
     },

@@ -31,7 +31,17 @@ let ProjectsSchema = new SimpleSchema({
     },
     'created': {
         type: Date,
-        label: 'The date the project was created in the projects collection'
+        label: 'The date the project was first created'
+    },
+    'updated': {
+        type: Date,
+        label: 'The date the project was last updated',
+        optional: true
+    },
+    'archived': {
+        type: Date,
+        label: 'The date the project was archived',
+        optional: true
     }
 });
 

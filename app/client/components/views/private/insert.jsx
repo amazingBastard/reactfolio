@@ -9,6 +9,8 @@ App.Insert = React.createClass({
     handleSave(event) {
         event.preventDefault();
 
+
+
         console.log('save project');
     },
 

@@ -27,7 +27,7 @@ App.ProjectForm = React.createClass({
                         <label className="icon label" htmlFor="title"><i className="fa fa-file"></i></label>
                         <input type="text" name="title" className="title input" placeholder="Project title" autofocus/>
                     </div>
-                    <div className="edit markdown">
+                    <div className="input group">
                         <textarea name="content" className="content input" placeholder="Write about your project..."></textarea>
                     </div>
                 </form>

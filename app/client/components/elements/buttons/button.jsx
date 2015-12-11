@@ -1,6 +1,7 @@
 App.Button = React.createClass({
     propTypes: {
-        buttonProps: React.PropTypes.object
+        buttonProps: React.PropTypes.object,
+        handleEvent: React.PropTypes.func
     },
 
     shouldComponentUpdate() {
@@ -33,7 +34,7 @@ App.Button = React.createClass({
                 let icon = this.props.buttonProps.icon;
 
                 return (
-                    <button className={type}>
+                    <button className={type} onClick={this.props.handleEvent}>
                         <i className={icon}></i>
                     </button>
                 );
@@ -41,7 +42,7 @@ App.Button = React.createClass({
                 let label = this.props.buttonProps.label;
 
                 return (
-                    <button className={type}>{label}</button>
+                    <button className={type} onClick={this.props.handleEvent}>{label}</button>
                 );
             }
         }

@@ -10,7 +10,7 @@ App.Project = React.createClass({
     render() {
         let title = this.props.project.title,
             author = this.props.project.author,
-            date = this.props.project.created;
+            date = DateHelpers.fromNow(this.props.project.created);
 
         if (RouterHelpers.currentRoute('root')) {
             let content = this.props.project.content;

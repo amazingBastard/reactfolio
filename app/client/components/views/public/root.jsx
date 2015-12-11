@@ -36,16 +36,17 @@ App.Root = React.createClass({
     },
 
     render() {
-        let project = this.data.project,
-            messageProps = {
+        let messageProps = {
                 module: 'message module',
                 type: 'centered message',
                 message: 'There are no projects'
-            }
+            };
 
         if (this.data.isLoading) {
             return <App.Loading />;
         } else {
+            let project = this.data.project;
+
             return (
                 <view className="animated fadeIn root view">
                     {!project ? <App.Message messageProps={messageProps}/> :

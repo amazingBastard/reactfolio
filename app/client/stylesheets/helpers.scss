@@ -1,0 +1,32 @@
+@import '_variables';
+
+.highlight {
+  background-color: $highlight-color !important;
+}
+
+.emphasis {
+  font-style: italic !important;
+}
+
+.light {
+  color: $light !important;
+}
+
+.hidden {
+  display: none !important;
+
+  &.mobile {
+
+    @media (min-width: $tablet-width) {
+      display: inline-block !important;
+    }
+  }
+}
+
+// wildcard
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

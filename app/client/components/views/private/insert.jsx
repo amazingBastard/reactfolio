@@ -5,10 +5,10 @@ App.Insert = React.createClass({
         // save draft/publish/cancel on the right
 
         let leftButton = {
-                type: 'left icon button',
+                type: 'left light icon button',
                 icon: 'fa fa-eye'
             }, rightButton = {
-                type: 'right icon button',
+                type: 'right light icon button',
                 icon: 'fa fa-save'
             };
 

@@ -5,7 +5,8 @@ html {
   body {
 
     p, a, li, td, th, pre, code,
-    blockquote, article, figure {
+    blockquote, article, figure,
+    textarea, input, select {
       margin: 0;
       color: $font-color;
       font-family: $font-family-base;
@@ -64,7 +65,7 @@ html {
       }
     }
 
-    h1, h2, h3, h4, h5, h6, th, figcaption {
+    h1, h2, h3, h4, h5, h6, th, figcaption, .title {
       margin: 0;
       color: $header-color;
       font-family: $font-family-header;
@@ -73,7 +74,9 @@ html {
       line-height: 1;
     }
 
-    h1 {
+    h1,
+    h1.title,
+    input.title {
       font-size: modular-scale(5);
 
       @media (min-width: $phone-width) {
@@ -117,7 +120,8 @@ html {
       }
     }
 
-    h2 {
+    h2,
+    h2.title {
       font-size: modular-scale(4);
 
       @media (min-width: $phone-width) {
@@ -161,7 +165,8 @@ html {
       }
     }
 
-    h3 {
+    h3,
+    h3.title {
       font-size: modular-scale(3);
 
       @media (min-width: $phone-width) {
@@ -205,7 +210,8 @@ html {
       }
     }
 
-    h4 {
+    h4,
+    h4.title {
       font-size: modular-scale(2);
 
       @media (min-width: $phone-width) {
@@ -249,7 +255,8 @@ html {
       }
     }
 
-    h5 {
+    h5,
+    h5.title {
       font-size: modular-scale(1);
 
       @media (min-width: $phone-width) {
@@ -293,7 +300,8 @@ html {
       }
     }
 
-    h6 {
+    h6,
+    h6.title {
       font-size: modular-scale(0);
 
       @media (min-width: $phone-width) {

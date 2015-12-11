@@ -16,7 +16,7 @@ App.ProjectForm = React.createClass({
                                value={title} autofocus/>
                     </div>
                     <div className="edit markdown">
-                        <textarea name="content" className="content input" placeholder="Write about your project...">{content}</textarea>
+                        <textarea name="content" className="content input" placeholder="Use markdown to write about your project...">{content}</textarea>
                     </div>
                 </form>
             );
@@ -24,11 +24,10 @@ App.ProjectForm = React.createClass({
             return (
                 <form className="insert project form">
                     <div className="input group">
-                        <label className="icon label" htmlFor="title"><i className="fa fa-file"></i></label>
                         <input type="text" name="title" className="title input" placeholder="Project title" autofocus/>
                     </div>
                     <div className="input group">
-                        <textarea name="content" className="content input" placeholder="Write about your project..."></textarea>
+                        <textarea name="content" className="content input" placeholder="Use markdown to write about your project..."></textarea>
                     </div>
                 </form>
             );

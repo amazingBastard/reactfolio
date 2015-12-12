@@ -251,5 +251,10 @@ html {
         color: $light;
       }
     }
+
+    &.markdown {
+      position: relative;
+      display: block;
+    }
   }
 }

@@ -7,12 +7,17 @@ App.Markdown = React.createClass({
         return true;
     },
 
-    render() {
+    renderHTML() {
         let content = this.props.content;
 
+        return {__html: marked(content)};
+    },
+
+    render() {
         return (
             <module className="markdown module">
-                <markdown className="render markdown">{content}</markdown>
+                <markdown className="render markdown"
+                          dangerouslySetInnerHTML={this.renderHTML()}></markdown>
             </module>
         );
     }

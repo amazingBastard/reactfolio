@@ -4,6 +4,7 @@
 .module {
   display: block;
   position: relative;
+  padding: $base;
 
   &.fixed {
     position: fixed;
@@ -42,14 +43,15 @@
     }
   }
 
-  &.project {
-    margin: $base;
+  &.markdown {
+    padding: 0;
   }
 
   &.toolbar {
     position: fixed;
     bottom: 0;
     left: 0;
+    padding: 0;
 
     .button {
       position: fixed;

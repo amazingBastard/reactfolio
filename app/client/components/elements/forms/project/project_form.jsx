@@ -22,7 +22,7 @@ App.ProjectForm = React.createClass({
             );
         } else {
             return (
-                <form className="insert project form">
+                <form className="create project form">
                     <div className="input group">
                         <input type="text" name="title" className="title input" placeholder="Project title" autofocus/>
                     </div>

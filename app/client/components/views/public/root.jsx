@@ -23,7 +23,7 @@ App.Root = React.createClass({
                 icon: 'fa fa-th'
             }, adminButton = {
                 type: 'left icon button',
-                route: 'insert',
+                route: 'create',
                 icon: 'fa fa-plus'
             };
 

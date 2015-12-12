@@ -13,10 +13,10 @@ const privateRoutes = FlowRouter.group({
     triggersEnter: [privateRedirect, pageView]
 });
 
-privateRoutes.route('/insert', {
-    name: 'insert',
+privateRoutes.route('/create', {
+    name: 'create',
     action() {
-        ReactLayout.render(App.Layout, {view: <App.Insert />});
+        ReactLayout.render(App.Layout, {view: <App.Create />});
     }
 });
 

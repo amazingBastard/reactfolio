@@ -1,4 +1,4 @@
-App.Insert = React.createClass({
+App.Create = React.createClass({
 
     togglePreview(event) {
         event.preventDefault();
@@ -56,7 +56,7 @@ App.Insert = React.createClass({
 
     render() {
         return (
-            <view className="animated fadeIn insert view">
+            <view className="animated fadeIn create view">
                 <App.ProjectForm />
                 {this.renderToolbar()}
             </view>

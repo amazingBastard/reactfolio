@@ -23,7 +23,7 @@ App.Portfolio = React.createClass({
                 icon: 'fa fa-square'
             }, adminButton = {
                 type: 'left icon button',
-                route: 'insert',
+                route: 'create',
                 icon: 'fa fa-plus'
             };
 

@@ -8,6 +8,7 @@ html {
     blockquote, article, figure,
     textarea, input, select {
       margin: 0;
+      margin-bottom: $tiny;
       color: $font-color;
       font-family: $font-family-base;
       font-size: $base;
@@ -68,6 +69,7 @@ html {
     h1, h2, h3, h4, h5, h6,
     th, figcaption, .title {
       margin: 0;
+      margin-bottom: $tiny;
       color: $header-color;
       font-family: $font-family-header;
       font-size: inherit;

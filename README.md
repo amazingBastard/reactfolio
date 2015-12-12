@@ -98,6 +98,7 @@ Have a look at the repository for more information.
   * [wolves:bourbon](https://github.com/wolvesio/meteor-bourbon)
   * [stevezhu:lodash](https://github.com/stevezhu/meteor-lodash)
   * [momentjs:moment](https://github.com/moment/moment/)
+  * [perak:markdown](https://github.com/perak/markdown)
 
 The "insecure" and "autopublish" packages are removed by default (they make your app vulnerable).
 

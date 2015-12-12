@@ -8,7 +8,7 @@ App.Markdown = React.createClass({
     },
 
     render() {
-        let content = this.props.content.content;
+        let content = this.props.content;
 
         return (
             <module className="markdown module">

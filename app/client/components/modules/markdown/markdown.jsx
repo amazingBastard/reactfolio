@@ -10,7 +10,7 @@ App.Markdown = React.createClass({
     renderHTML() {
         let content = this.props.content;
 
-        return {__html: marked(content)};
+        return {__html: marked(content, {sanitize: true})};
     },
 
     render() {

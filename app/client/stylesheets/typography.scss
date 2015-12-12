@@ -74,6 +74,16 @@ html {
       line-height: 1;
     }
 
+    .title {
+      margin: $tiny;
+      text-align: center;
+
+      .meta {
+        display: block;
+        font-size: $half;
+      }
+    }
+
     h1,
     h1.title,
     input.title {

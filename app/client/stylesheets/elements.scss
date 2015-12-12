@@ -85,8 +85,8 @@ html {
       }
     }
 
-    .list {
-      margin: 0;
+    .list, ul {
+      padding-left: $large;
       list-style-type: square;
 
       &.unstyled {

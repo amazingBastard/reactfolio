@@ -110,6 +110,10 @@ html {
       }
     }
 
+    ol {
+      padding-left: $jumbo;
+    }
+
     .label {
       display: inline-block;
       position: relative;
@@ -250,6 +254,12 @@ html {
       &.light {
         color: $light;
       }
+    }
+
+    .figure {
+      margin: 0 auto;
+      padding: $large 0;
+      border-bottom: $atomic solid $divider-color;
     }
 
     .markdown {

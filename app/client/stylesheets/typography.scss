@@ -11,7 +11,7 @@ html {
       margin-bottom: $tiny;
       color: $font-color;
       font-family: $font-family-base;
-      font-size: $base;
+      font-size: $font-size-base;
       line-height: 1;
 
       @media (min-width: $phone-width) {
@@ -78,6 +78,7 @@ html {
     }
 
     .title {
+      margin: 0;
       text-align: center;
 
       .meta {

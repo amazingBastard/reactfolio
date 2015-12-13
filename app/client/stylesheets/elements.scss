@@ -258,8 +258,12 @@ html {
 
     .figure {
       margin: 0 auto;
-      padding: $large 0;
+      padding: $huge $base;
       border-bottom: $atomic solid $divider-color;
+
+      &:last-child {
+        border: 0;
+      }
     }
 
     .markdown {

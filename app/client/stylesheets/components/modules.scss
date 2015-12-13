@@ -43,6 +43,14 @@
     }
   }
 
+  &.project {
+    padding-top: $huge;
+  }
+
+  &.projects {
+    padding: 0;
+  }
+
   &.markdown {
     margin: $massive auto;
     padding: 0;

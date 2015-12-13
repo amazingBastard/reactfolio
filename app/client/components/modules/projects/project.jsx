@@ -9,7 +9,6 @@ App.Project = React.createClass({
 
     render() {
         let title = this.props.project.title,
-            author = this.props.project.author,
             date = DateHelpers.fromNow(this.props.project.created);
 
         if (RouterHelpers.currentRoute('root')) {
@@ -18,7 +17,7 @@ App.Project = React.createClass({
             return (
                 <module className="project module">
                     <h1 className="title">{title}
-                        <small className="meta">{author} - {date}</small>
+                        <small className="meta">posted {date}</small>
                     </h1>
                     <App.Markdown content={content}/>
                 </module>
@@ -27,7 +26,7 @@ App.Project = React.createClass({
             return (
                 <figure className="project figure">
                     <h1 className="title">{title}
-                        <small className="meta">{author} - {date}</small>
+                        <small className="meta">posted {date}</small>
                     </h1>
                 </figure>
             );

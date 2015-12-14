@@ -16,20 +16,14 @@ App.Root = React.createClass({
     },
 
     renderToolbar() {
-        let isUser = !Meteor.loggingIn() && Meteor.user(),
-            buttonProps = {
-                type: 'right icon button',
-                route: 'portfolio',
-                icon: 'fa fa-th'
-            }, adminButton = {
-                type: 'left icon button',
-                route: 'create',
-                icon: 'fa fa-plus'
-            };
+        let buttonProps = {
+            type: 'right icon button',
+            route: 'portfolio',
+            icon: 'fa fa-th'
+        };
 
         return (
             <module className="toolbar module">
-                {(isUser) ? <App.Button buttonProps={adminButton}/> : ''}
                 <App.Button buttonProps={buttonProps}/>
             </module>
         );
@@ -37,10 +31,10 @@ App.Root = React.createClass({
 
     render() {
         let messageProps = {
-                module: 'message module',
-                type: 'centered message',
-                message: 'There are no projects'
-            };
+            module: 'message module',
+            type: 'centered message',
+            message: 'There are no projects'
+        };
 
         if (this.data.isLoading) {
             return <App.Loading />;

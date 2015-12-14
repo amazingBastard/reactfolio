@@ -11,6 +11,20 @@ App.Dashboard = React.createClass({
         return true;
     },
 
+    renderToolbar() {
+        let buttonProps = {
+            type: 'right icon button',
+            route: 'create',
+            icon: 'fa fa-plus'
+        };
+
+        return (
+            <module className="toolbar module">
+                <App.Button buttonProps={buttonProps}/>
+            </module>
+        );
+    },
+
     render() {
         let currentUser = this.data.user.profile.name;
 
@@ -21,6 +35,7 @@ App.Dashboard = React.createClass({
         return (
             <view className="animated fadeIn dashboard view">
                 <p className="greeting">Hello, {currentUser}!</p>
+                {this.renderToolbar()}
             </view>
         );
     }

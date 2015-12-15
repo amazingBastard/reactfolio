@@ -16,14 +16,21 @@ App.Portfolio = React.createClass({
     },
 
     renderToolbar() {
-        let buttonProps = {
-            type: 'right icon button',
-            route: 'root',
-            icon: 'fa fa-square'
-        };
+        let isUser = !Meteor.loggingIn() && Meteor.user(),
+            buttonProps = {
+                type: 'right icon button',
+                route: 'root',
+                icon: 'fa fa-square'
+            },
+            adminButton = {
+                type: 'left icon button',
+                route: 'dashboard',
+                icon: 'fa fa-user'
+            };
 
         return (
             <module className="toolbar module">
+                {(isUser) ? <App.Button buttonProps={adminButton}/> : ''}
                 <App.Button buttonProps={buttonProps}/>
             </module>
         );

@@ -12,15 +12,21 @@ App.Dashboard = React.createClass({
     },
 
     renderToolbar() {
-        let buttonProps = {
-            type: 'right icon button',
-            route: 'create',
-            icon: 'fa fa-plus'
-        };
+        let leftButtonProps = {
+                type: 'left icon button',
+                route: 'root',
+                icon: 'fa fa-home'
+            },
+            rightButtonProps = {
+                type: 'right icon button',
+                route: 'create',
+                icon: 'fa fa-plus'
+            };
 
         return (
             <module className="toolbar module">
-                <App.Button buttonProps={buttonProps}/>
+                <App.Button buttonProps={leftButtonProps}/>
+                <App.Button buttonProps={rightButtonProps}/>
             </module>
         );
     },
@@ -32,7 +38,7 @@ App.Dashboard = React.createClass({
 
         return (
             <view className="animated fadeIn dashboard view">
-                <App.Greeting user={currentUser} />
+                <App.Greeting user={currentUser}/>
                 {this.renderToolbar()}
             </view>
         );

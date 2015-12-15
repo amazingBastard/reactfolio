@@ -8,11 +8,11 @@ App.Greeting = React.createClass({
     },
 
     render() {
-        let currentUser = this.props.user;
+        let name = this.props.user;
 
         return (
             <module className="greeting module">
-                <p className="greeting">Hello, {currentUser}!</p>
+                <p className="greeting">Hello, {name}!</p>
             </module>
         );
     }

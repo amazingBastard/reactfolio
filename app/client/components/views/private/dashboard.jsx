@@ -28,9 +28,7 @@ App.Dashboard = React.createClass({
     render() {
         let currentUser = this.data.user.profile.name;
 
-        // @TODO: create module for greeting
         // @TODO: add projects module to manage projects (update, remove, archive)
-        // @TODO: add button to create new project
 
         return (
             <view className="animated fadeIn dashboard view">

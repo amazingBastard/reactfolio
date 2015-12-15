@@ -34,7 +34,7 @@ App.Dashboard = React.createClass({
 
         return (
             <view className="animated fadeIn dashboard view">
-                <p className="greeting">Hello, {currentUser}!</p>
+                <App.Greeting user={currentUser} />
                 {this.renderToolbar()}
             </view>
         );

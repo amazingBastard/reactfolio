@@ -7,8 +7,28 @@ App.Project = React.createClass({
         return true;
     },
 
+    renderAdminButtons() {
+        let updateButtonProps = {
+                type: 'icon button',
+                route: 'update',
+                icon: 'fa fa-wrench'
+            },
+            removeButtonProps = {
+                type: 'icon button',
+                icon: 'fa fa-times'
+            };
+
+        return (
+            <span className="admin buttons">
+                <App.Button buttonProps={updateButtonProps}/>
+                <App.Button buttonProps={removeButtonProps}/>
+            </span>
+        );
+    },
+
     render() {
-        let title = this.props.project.title,
+        let isUser = !Meteor.loggingIn() && Meteor.user(),
+            title = this.props.project.title,
             date = DateHelpers.fromNow(this.props.project.created);
 
         if (RouterHelpers.currentRoute('root')) {
@@ -27,6 +47,7 @@ App.Project = React.createClass({
                 <figure className="project figure">
                     <h1 className="title">{title}
                         <small className="meta">posted {date}</small>
+                        {(isUser) ? this.renderAdminButtons() : ''}
                     </h1>
                 </figure>
             );

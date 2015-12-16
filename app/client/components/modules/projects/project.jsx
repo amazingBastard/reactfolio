@@ -47,8 +47,8 @@ App.Project = React.createClass({
                 <figure className="project figure">
                     <h1 className="title">{title}
                         <small className="meta">posted {date}</small>
-                        {(isUser) ? this.renderAdminButtons() : ''}
                     </h1>
+                    {(isUser) ? this.renderAdminButtons() : ''}
                 </figure>
             );
         }

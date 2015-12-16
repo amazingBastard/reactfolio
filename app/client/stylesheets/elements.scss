@@ -264,6 +264,10 @@ html {
       &:last-child {
         border: 0;
       }
+
+      &.project {
+        cursor: pointer;
+      }
     }
 
     .markdown {

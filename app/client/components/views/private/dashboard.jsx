@@ -2,8 +2,12 @@ App.Dashboard = React.createClass({
     mixins: [ReactMeteorData],
 
     getMeteorData() {
+        let selector = {author: 'Damir Vazgird'},
+            subscription = Meteor.subscribe('projects', selector);
+
         return {
-            user: Meteor.user()
+            isLoading: !subscription.ready(),
+            projects: Projects.find({}, {sort: {created: -1}}).fetch()
         };
     },
 
@@ -32,15 +36,26 @@ App.Dashboard = React.createClass({
     },
 
     render() {
-        let currentUser = this.data.user.profile.name;
+        let currentUser = Meteor.user().profile.name,
+            projects = this.data.projects,
+            noProjects = projects.length === 0,
+            messageProps = {
+                module: 'message module',
+                type: 'centered message',
+                message: 'There are no projects, try adding some!'
+            };
 
-        // @TODO: add projects module to manage projects (update, remove, archive)
-
-        return (
-            <view className="animated fadeIn dashboard view">
-                <App.Greeting user={currentUser}/>
-                {this.renderToolbar()}
-            </view>
-        );
+        if (this.data.isLoading) {
+            return <App.Loading />;
+        } else {
+            return (
+                <view className="animated fadeIn dashboard view">
+                    <App.Greeting user={currentUser}/>
+                    {noProjects ? <App.Message messageProps={messageProps}/> :
+                        <App.Projects projects={projects}/>}
+                    {this.renderToolbar()}
+                </view>
+            );
+        }
     }
 });

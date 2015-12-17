@@ -265,6 +265,8 @@ html {
       &.project {
         cursor: pointer;
 
+        // @TODO: considering making this global
+
         .admin.buttons {
           position: absolute;
           left: $half;
@@ -272,6 +274,7 @@ html {
           border-radius: $massive;
           background: $neutral-color;
           transform: translate(-$half, 0);
+          z-index: 1;
 
           .button {
             padding: $small;

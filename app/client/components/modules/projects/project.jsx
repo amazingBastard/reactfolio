@@ -13,6 +13,10 @@ App.Project = React.createClass({
                 route: 'update',
                 icon: 'fa fa-wrench'
             },
+            archiveButtonProps = {
+                type: 'icon button',
+                icon: 'fa fa-archive'
+            },
             removeButtonProps = {
                 type: 'icon button',
                 icon: 'fa fa-times'
@@ -21,6 +25,7 @@ App.Project = React.createClass({
         return (
             <span className="admin buttons">
                 <App.Button buttonProps={updateButtonProps}/>
+                <App.Button buttonProps={archiveButtonProps}/>
                 <App.Button buttonProps={removeButtonProps}/>
             </span>
         );

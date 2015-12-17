@@ -276,8 +276,21 @@ html {
           transform: translate(-$half, 0);
           z-index: 1;
 
+          @media (min-width: $phone-width) {
+            bottom: -$base;
+          }
+
+          @media (min-width: $laptop-width) {
+            bottom: -$small;
+          }
+
+          @media (min-width: $desktop-width) {
+            bottom: -($small - $quantum);
+          }
+
           .button {
             padding: $small;
+            font-size: $font-size-base;
           }
         }
       }
